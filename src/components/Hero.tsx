@@ -81,7 +81,8 @@ export default function Hero() {
 
               <p className="text-lg md:text-xl text-[var(--foreground-secondary)] mb-6 max-w-2xl mx-auto leading-relaxed">
                 Korea and China growth for funded Web3 projects.
-                <span className="text-[var(--foreground)] font-medium"> Real traction, not vanity metrics.</span>
+                <br />
+                <span className="text-[var(--foreground)] font-medium">Real traction, not vanity metrics.</span>
               </p>
 
               {/* Clean CTA Buttons */}
