@@ -80,7 +80,9 @@ export default function Hero() {
               </h1>
 
               <p className="text-lg md:text-xl text-[var(--foreground-secondary)] mb-6 max-w-2xl mx-auto leading-relaxed">
-                Korea and China growth for funded Web3 projects.
+                Korea and China dominance for market-leading teams.
+                <br />
+                Not translated tweets. Not inflated reports.
                 <br />
                 <span className="text-[var(--foreground)] font-medium">Real traction, not vanity metrics.</span>
               </p>

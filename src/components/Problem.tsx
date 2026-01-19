@@ -7,7 +7,7 @@ const problems = [
     number: "01",
     title: "The Farmer Trap",
     description:
-      "You get users, but they're farming points with zero liquidity. When incentives stop, they leave. You paid for mercenaries, not believers.",
+      "You get users, but they're farming points with zero liquidity. When incentives stop, they leave. Mercenaries dump. Believers hold. You’re currently paying for the dump.",
     stat: "90%",
     statLabel: "of airdrop farmers leave within 30 days",
   },

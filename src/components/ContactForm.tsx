@@ -291,7 +291,7 @@ export default function ContactForm() {
               </button>
 
               <p className="text-center text-[var(--foreground-light-secondary)] text-sm">
-                We work with a small number of projects at a time to ensure quality.
+                We cap our active roster at 5 partners per quarter to ensure depth. If timing doesn't work now, we'll tell you.
               </p>
             </form>
           </ScrollReveal>
