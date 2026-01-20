@@ -70,7 +70,7 @@ export default function Hero() {
               <div className="inline-flex items-center gap-2 bg-[var(--accent-teal)]/10 rounded-full px-4 py-2 mb-5">
                 <span className="w-2 h-2 bg-[var(--accent-teal)] rounded-full"></span>
                 <span className="text-[var(--accent)] text-sm font-medium">
-                  Seoul-Based Web3 Growth Agency
+                  Recent client: 3x higher conversion in Korea than global
                 </span>
               </div>
 
