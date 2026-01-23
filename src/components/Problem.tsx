@@ -31,7 +31,7 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section id="problem" className="section-padding relative overflow-hidden bg-[#1a1a1a]">
+    <section id="problem" className="section-padding relative overflow-hidden bg-gradient-to-b from-[#0a0a0a] via-[#151515] to-[#111111]">
       {/* Animated Grid pattern */}
       <div className="absolute inset-0 overflow-hidden">
         <div

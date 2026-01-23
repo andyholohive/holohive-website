@@ -29,7 +29,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="section-padding relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-white">
+    <section id="faq" className="section-padding relative overflow-hidden bg-gradient-to-b from-[#0f0f0f] via-[#0c0c0c] to-[#0a0a0a]">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Gradient orbs */}
@@ -49,16 +49,16 @@ export default function FAQ() {
 
         {/* Dot pattern */}
         <div
-          className="absolute inset-0 opacity-[0.25]"
+          className="absolute inset-0 opacity-[0.15]"
           style={{
-            backgroundImage: 'radial-gradient(circle, #cbd5e1 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle, rgba(0, 212, 170, 0.4) 1px, transparent 1px)',
             backgroundSize: '28px 28px'
           }}
         />
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-start">
+        <div className="grid lg:grid-cols-2 gap-10 items-start">
           {/* Left Column - Header */}
           <div className="self-start">
             <span className="group inline-flex items-center gap-2 text-[var(--accent-teal)] text-sm font-bold tracking-wider uppercase mb-4 bg-[var(--accent-teal)]/10 px-3 py-1 rounded-full cursor-default transition-transform duration-300 hover:scale-110 origin-left">
@@ -67,28 +67,28 @@ export default function FAQ() {
               </svg>
               Questions
             </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground-light)] mb-6">
               Before You <br />
               <span className="text-[var(--accent-teal)]">Reach Out</span>
             </h2>
-            <p className="text-gray-600 mb-8 leading-relaxed">
+            <p className="text-[var(--foreground-light-secondary)] mb-8 leading-relaxed">
               We know you have questions. Here are the ones we hear most often from founders considering Asia expansion.
             </p>
 
             {/* Quick stats */}
             <div className="flex gap-4">
-              <div className="group flex items-center gap-4 bg-white rounded-xl px-5 py-4 shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-[var(--accent-teal)]/30">
+              <div className="group flex items-center gap-4 bg-[#1a1a1a] rounded-xl px-5 py-4 border border-[#2a2a2a] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-[var(--accent-teal)]/30">
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[var(--accent-teal)] to-emerald-500 flex items-center justify-center group-hover:scale-105 transition-transform shadow-md shadow-[var(--accent-teal)]/20">
                   <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
                   </svg>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-gray-900">48hr</div>
-                  <div className="text-sm text-gray-500">Response Time</div>
+                  <div className="text-2xl font-bold text-[var(--foreground-light)]">48hr</div>
+                  <div className="text-sm text-[var(--foreground-light-secondary)]">Response Time</div>
                 </div>
               </div>
-              <div className="group flex items-center gap-4 bg-white rounded-xl px-5 py-4 shadow-md border border-gray-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-purple-400/30">
+              <div className="group flex items-center gap-4 bg-[#1a1a1a] rounded-xl px-5 py-4 border border-[#2a2a2a] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-purple-400/30">
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center group-hover:scale-105 transition-transform shadow-md shadow-purple-500/20">
                   <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                     <path d="M9 5H7a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-2" />
@@ -97,8 +97,8 @@ export default function FAQ() {
                   </svg>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-gray-900">60s</div>
-                  <div className="text-sm text-gray-500">Form Completion</div>
+                  <div className="text-2xl font-bold text-[var(--foreground-light)]">60s</div>
+                  <div className="text-sm text-[var(--foreground-light-secondary)]">Form Completion</div>
                 </div>
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function FAQ() {
 
             {/* More questions CTA */}
             <div className="text-center pt-6">
-              <p className="text-gray-600 text-sm">
+              <p className="text-[var(--foreground-light-secondary)] text-sm">
                 Have a different question?{" "}
                 <a href="#contact" className="text-[var(--accent-teal)] hover:underline">
                   Ask us directly

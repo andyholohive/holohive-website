@@ -8,7 +8,7 @@ const calendarIcon = (
 
 const steps = [
   {
-    month: "Month 1",
+    month: "Phase 1",
     title: "Foundation",
     description:
       "We analyze your positioning and rebuild it for Asia. What story are we telling? What makes you matter here?",
@@ -17,7 +17,7 @@ const steps = [
     color: "var(--accent)",
   },
   {
-    month: "Month 2",
+    month: "Phase 2",
     title: "Seeding",
     description:
       "We build awareness through creators who explain why your project matters. Credibility before conversion.",
@@ -26,7 +26,7 @@ const steps = [
     color: "var(--accent-teal)",
   },
   {
-    month: "Month 3+",
+    month: "Phase 3+",
     title: "Amplification",
     description:
       "Once the market is paying attention, we push harder with coordinated campaigns to the people who matter.",
@@ -38,7 +38,7 @@ const steps = [
 
 export default function Process() {
   return (
-    <section id="process" className="section-padding relative overflow-hidden bg-[#111111]">
+    <section id="process" className="section-padding relative overflow-hidden bg-gradient-to-b from-[#111111] via-[#141414] to-[#1a1a1a]">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Gradient orbs */}
@@ -70,7 +70,7 @@ export default function Process() {
       <div className="container-custom relative z-10">
         {/* Section Header */}
         <ScrollReveal>
-          <div className="text-center mb-16 max-w-2xl mx-auto">
+          <div className="text-center mb-10 max-w-2xl mx-auto">
             <span className="text-[var(--accent-teal)] text-sm font-semibold tracking-wider uppercase mb-4 block">
               How We Work
             </span>
@@ -92,7 +92,7 @@ export default function Process() {
 
             {steps.map((step, index) => (
               <ScrollReveal key={index} delay={index * 200}>
-                <div className={`relative flex items-start gap-8 mb-12 last:mb-0 ${
+                <div className={`relative flex items-start gap-8 mb-8 last:mb-0 ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}>
                   {/* Timeline node */}

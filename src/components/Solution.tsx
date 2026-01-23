@@ -46,7 +46,7 @@ const antiPitch = [
 
 export default function Solution() {
   return (
-    <section id="solution" className="section-padding relative overflow-hidden bg-gradient-to-br from-white via-gray-50 to-white">
+    <section id="solution" className="section-padding relative overflow-hidden bg-gradient-to-b from-[#111111] via-[#0f0f0f] to-[#111111]">
       {/* Background effects */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Gradient orbs */}
@@ -66,16 +66,16 @@ export default function Solution() {
 
         {/* Dot pattern */}
         <div
-          className="absolute inset-0 opacity-[0.25]"
+          className="absolute inset-0 opacity-[0.15]"
           style={{
-            backgroundImage: 'radial-gradient(circle, #cbd5e1 1px, transparent 1px)',
+            backgroundImage: 'radial-gradient(circle, rgba(0, 212, 170, 0.4) 1px, transparent 1px)',
             backgroundSize: '28px 28px'
           }}
         />
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Left Column - Header */}
           <div className="lg:sticky lg:top-24 self-start">
             <ScrollReveal>
@@ -86,22 +86,22 @@ export default function Solution() {
                 </svg>
                 What We Do
               </span>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground-light)] mb-6 leading-tight">
                 Real Traction,{" "}
                 <span className="text-[var(--accent-teal)]">
                   Not Vanity Metrics
                 </span>
               </h2>
-              <p className="text-gray-600 text-lg mb-8 leading-relaxed">
+              <p className="text-[var(--foreground-light-secondary)] text-lg mb-8 leading-relaxed">
                 We help funded Web3 projects build genuine presence in Korea and China. No shortcuts, no fake engagement.
               </p>
 
               {/* Anti-pitch */}
               <div className="space-y-3">
                 {antiPitch.map((item, index) => (
-                  <div key={index} className="group flex items-center gap-3 text-gray-700 hover:text-gray-900 transition-all duration-300 cursor-default hover:scale-105 origin-left">
-                    <div className="w-6 h-6 rounded-full bg-red-100 flex items-center justify-center flex-shrink-0 group-hover:bg-red-200 transition-all">
-                      <svg className="w-3 h-3 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div key={index} className="group flex items-center gap-3 text-[var(--foreground-light-secondary)] hover:text-[var(--foreground-light)] transition-all duration-300 cursor-default hover:scale-105 origin-left">
+                    <div className="w-6 h-6 rounded-full bg-red-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-red-500/30 transition-all">
+                      <svg className="w-3 h-3 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </div>

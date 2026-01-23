@@ -53,7 +53,7 @@ export default function Proof() {
   const otherTestimonials = testimonials.filter((t) => !t.featured);
 
   return (
-    <section id="proof" className="section-padding relative overflow-hidden bg-[#1a1a1a]">
+    <section id="proof" className="section-padding relative overflow-hidden bg-gradient-to-b from-[#1a1a1a] via-[#151515] to-[#0f0f0f]">
       {/* Background texture - radial dots pattern */}
       <div className="absolute inset-0 overflow-hidden">
         <div
@@ -70,7 +70,7 @@ export default function Proof() {
       <div className="container-custom relative z-10">
         {/* Section Header */}
         <ScrollReveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <span className="text-[var(--accent-teal)] text-sm font-semibold tracking-wider uppercase mb-4 block">
               Results
             </span>
@@ -84,7 +84,7 @@ export default function Proof() {
         </ScrollReveal>
 
         {/* Featured Testimonials */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
           {featuredTestimonials.map((testimonial, index) => (
             <ScrollReveal key={index} delay={index * 150}>
               <div className="relative group h-full">
@@ -99,6 +99,9 @@ export default function Proof() {
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-[var(--accent-teal)]/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 <div className="relative z-10 flex flex-col h-full">
+                  {/* Testimonial label */}
+                  <p className="text-[var(--accent-teal)] text-sm font-medium uppercase tracking-wider mb-3 text-center">Testimonial</p>
+
                   {/* Star rating */}
                   <div className="flex gap-1 mb-6">
                     {[...Array(5)].map((_, i) => (
@@ -133,7 +136,7 @@ export default function Proof() {
         </div>
 
         {/* Divider */}
-        <div className="flex items-center gap-4 mb-12">
+        <div className="flex items-center gap-4 mb-8">
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[var(--border-dark)] to-transparent" />
           <span className="text-[var(--foreground-light-secondary)] text-sm">More from our clients</span>
           <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[var(--border-dark)] to-transparent" />
