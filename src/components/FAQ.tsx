@@ -11,7 +11,7 @@ const faqs = [
   {
     question: "How long does this take?",
     answer:
-      "Typically 3 months. Month 1 is foundation and story. Month 2 is seeding and building credibility. Month 3 is amplification. You'll see early signs within the first few weeks, but real results take time. Overnight success is a lie sold by agencies who don't deliver.",
+      "Typically 3 months. You'll see early signs within the first few weeks, but real results take time. Overnight success is a lie sold by agencies who don't deliver.",
   },
   {
     question: "Why don't you start with a Korean Telegram right away?",

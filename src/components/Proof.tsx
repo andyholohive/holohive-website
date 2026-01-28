@@ -35,7 +35,7 @@ const testimonials = [
   {
     quote: "Deep understanding of how to launch in this space. I feel good sending clients their way.",
     name: "Jackson Weinreb",
-    role: "Head of Growth, YieldFi",
+    role: "Protocol Partnerships, The Tie",
     image: "/people/Jackson Weinreb.jpg",
     featured: false,
   },
@@ -71,11 +71,8 @@ export default function Proof() {
         {/* Section Header */}
         <ScrollReveal>
           <div className="text-center mb-10">
-            <span className="text-[var(--accent-teal)] text-sm font-semibold tracking-wider uppercase mb-4 block">
-              Results
-            </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[var(--foreground-light)]">
-              What Clients Say
+              Testimonials
             </h2>
             <p className="text-[var(--foreground-light-secondary)] max-w-xl mx-auto">
               Don&apos;t take our word for it. Here&apos;s what founders and growth leads say about working with us.
@@ -99,9 +96,6 @@ export default function Proof() {
                 <div className="absolute -top-20 -right-20 w-40 h-40 bg-[var(--accent-teal)]/10 rounded-full blur-3xl opacity-0 group-hover:opacity-100 transition-opacity" />
 
                 <div className="relative z-10 flex flex-col h-full">
-                  {/* Testimonial label */}
-                  <p className="text-[var(--accent-teal)] text-sm font-medium uppercase tracking-wider mb-3 text-center">Testimonial</p>
-
                   {/* Star rating */}
                   <div className="flex gap-1 mb-6">
                     {[...Array(5)].map((_, i) => (
@@ -135,12 +129,6 @@ export default function Proof() {
           ))}
         </div>
 
-        {/* Divider */}
-        <div className="flex items-center gap-4 mb-8">
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[var(--border-dark)] to-transparent" />
-          <span className="text-[var(--foreground-light-secondary)] text-sm">More from our clients</span>
-          <div className="flex-1 h-px bg-gradient-to-r from-transparent via-[var(--border-dark)] to-transparent" />
-        </div>
 
         {/* Other Testimonials - Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">

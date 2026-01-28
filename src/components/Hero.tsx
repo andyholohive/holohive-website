@@ -6,13 +6,13 @@ import AnimatedCounter from "./AnimatedCounter";
 
 const clients = [
   { name: "OKX", logo: "/logos/okx.png", testimonial: "Exceptional execution and deep market understanding.", color: "#2a2a2a" },
-  { name: "Avalanche", logo: "/logos/avalanche.png", testimonial: "Holo Hive's help on MapleStory's launch was invaluable.", color: "#E84142", grayscale: true },
+  { name: "Avalanche", logo: "/logos/avalanche2.png", testimonial: "Holo Hive's help on MapleStory's launch was invaluable.", color: "#E84142", grayscale: true },
   { name: "MapleStory", logo: "/logos/maplestory-v2.png", testimonial: "They helped us navigate the Korean market with precision.", color: "#FF9900" },
   { name: "Doodles", logo: "/logos/doodles-2.png", testimonial: "Professional team that delivers real results.", color: "#62B7E4", grayscale: true },
-  { name: "MON Protocol", logo: "/logos/monprotocol.png", testimonial: "One of the most professional partners we've worked with.", color: "#2a2a2a", grayscale: true },
-  { name: "Zetachain", logo: "/logos/zetachain.png", testimonial: "Deep understanding of the APAC crypto landscape.", color: "#00BC8B", grayscale: true },
+  { name: "MON Protocol", logo: "/logos/monprotocol2-trimmed.png", testimonial: "One of the most professional partners we've worked with.", color: "#2a2a2a", grayscale: true },
+  { name: "Zetachain", logo: "/logos/zetachain2.png", testimonial: "Deep understanding of the APAC crypto landscape.", color: "#00BC8B" },
   { name: "Fableborne", logo: "/logos/fableborne.png", testimonial: "One of the few teams we'd work with again without hesitation.", color: "#D4AF37", grayscale: true },
-  { name: "Magic Eden", logo: "/logos/magic-eden.png", testimonial: "Strong relationships and flawless execution.", color: "#E42575" },
+  { name: "Magic Eden", logo: "/logos/magic-eden2-trimmed.png", testimonial: "Strong relationships and flawless execution.", color: "#E42575" },
 ];
 
 const vcBackers = [
@@ -25,7 +25,7 @@ const vcBackers = [
 const stats = [
   { value: "75+", label: "Projects Launched", icon: "rocket" },
   { value: "$30B+", label: "Client FDV", icon: "chart" },
-  { value: "35%", label: "Korea Crypto Volume", icon: "globe" },
+  { value: "16M+", label: "Koreans drive 16% of global volume", icon: "globe" },
   { value: "Seoul", label: "Based Team", icon: "location" },
 ];
 
