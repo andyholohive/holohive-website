@@ -31,7 +31,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="text-[var(--foreground-light-secondary)] text-sm leading-relaxed mb-6">
-              Seoul-based Web3 growth agency specializing in Korea and China market entry for funded projects. Real traction, not vanity metrics.
+              Seoul-based Web3 growth agency specializing in Korea market entry for funded projects. Real traction, not vanity metrics.
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-4">

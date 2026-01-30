@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "We already have an agency. Why would we need you?",
     answer:
-      "We're not trying to replace your agency. We're the Asia (Korea/China) layer. The local relationships and distribution your global agency can't provide. We work alongside whatever team you have.",
+      "We're not trying to replace your agency. We're the Asia (Korea) layer. The local relationships and distribution your global agency can't provide. We work alongside whatever team you have.",
   },
 ];
 

@@ -9,18 +9,18 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Holo Hive APAC | Korea & China Growth for Web3 Projects",
-  description: "Real traction in Korea and China for funded Web3 projects. Not translated tweets. Not inflated reports. Seoul-based team working with Western founders since 2021.",
-  keywords: ["Web3", "Korea", "China", "crypto marketing", "Asia expansion", "blockchain", "Web3 growth"],
+  title: "Holo Hive APAC | Korea Growth for Web3 Projects",
+  description: "Real traction in Korea for funded Web3 projects. Not translated tweets. Not inflated reports. Seoul-based team working with Western founders since 2021.",
+  keywords: ["Web3", "Korea", "crypto marketing", "Asia expansion", "blockchain", "Web3 growth"],
   openGraph: {
-    title: "Holo Hive APAC | Korea & China Growth for Web3 Projects",
-    description: "Real traction in Korea and China for funded Web3 projects. Seoul-based team working with Western founders since 2021.",
+    title: "Holo Hive APAC | Korea Growth for Web3 Projects",
+    description: "Real traction in Korea for funded Web3 projects. Seoul-based team working with Western founders since 2021.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Holo Hive APAC | Korea & China Growth for Web3 Projects",
-    description: "Real traction in Korea and China for funded Web3 projects.",
+    title: "Holo Hive APAC | Korea Growth for Web3 Projects",
+    description: "Real traction in Korea for funded Web3 projects.",
   },
 };
 

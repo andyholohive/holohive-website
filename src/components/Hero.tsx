@@ -7,15 +7,28 @@ import AnimatedCounter from "./AnimatedCounter";
 const clients = [
   { name: "OKX", logo: "/logos/okx.png", testimonial: "Exceptional execution and deep market understanding.", color: "#2a2a2a" },
   { name: "Avalanche", logo: "/logos/avalanche2.png", testimonial: "Holo Hive's help on MapleStory's launch was invaluable.", color: "#E84142", grayscale: true },
-  { name: "MapleStory", logo: "/logos/maplestory-v2.png", testimonial: "They helped us navigate the Korean market with precision.", color: "#FF9900" },
+  { name: "MapleStory", logo: "/logos/maplestory2.png", testimonial: "They helped us navigate the Korean market with precision.", color: "#FF9900" },
   { name: "Doodles", logo: "/logos/doodles-2.png", testimonial: "Professional team that delivers real results.", color: "#62B7E4", grayscale: true },
   { name: "MON Protocol", logo: "/logos/monprotocol2-trimmed.png", testimonial: "One of the most professional partners we've worked with.", color: "#2a2a2a", grayscale: true },
   { name: "Zetachain", logo: "/logos/zetachain2.png", testimonial: "Deep understanding of the APAC crypto landscape.", color: "#00BC8B" },
   { name: "Fableborne", logo: "/logos/fableborne.png", testimonial: "One of the few teams we'd work with again without hesitation.", color: "#D4AF37", grayscale: true },
   { name: "Magic Eden", logo: "/logos/magic-eden2-trimmed.png", testimonial: "Strong relationships and flawless execution.", color: "#E42575" },
+  { name: "0G Labs", logo: "/logos/0g.png", testimonial: "A team that truly understands the Korean market.", color: "#7C3AED" },
+  { name: "Ledger", logo: "/logos/ledger.png", testimonial: "Professional and results-driven.", color: "#FF5300" },
+  { name: "NRN", logo: "/logos/nrn-agents.png", testimonial: "Great partners for Asia expansion.", color: "#4ADE80" },
+  { name: "Flying Tulip", logo: "/logos/flying-tulip.png", testimonial: "Excellent execution in the Korean market.", color: "#E11D48" },
 ];
 
 const vcBackers = [
+  { name: "Sequoia", logo: "/logos/ventures/trimmed-Sequoia.png" },
+  { name: "Andreessen Horowitz", logo: "/logos/ventures/trimmed-Andreessen Horowitz.png" },
+  { name: "Google Ventures", logo: "/logos/ventures/trimmed-Google Ventures.png" },
+  { name: "Bain Capital", logo: "/logos/ventures/trimmed-BainCapital.png" },
+  { name: "Polychain Capital", logo: "/logos/ventures/trimmed-Polychain Capital.png" },
+  { name: "Dragonfly", logo: "/logos/ventures/trimmed-Drgaonfly.png" },
+  { name: "Framework", logo: "/logos/ventures/trimmed-framework.png" },
+  { name: "Golden Ventures", logo: "/logos/ventures/trimmed-Golden Ventures.png" },
+  { name: "VersionOne", logo: "/logos/ventures/trimmed-versionone.png" },
   { name: "Coinbase", logo: "/logos/coinbase.png" },
   { name: "a16z", logo: "/logos/a16z.png" },
   { name: "Paradigm", logo: "/logos/paradigm-trimmed.png" },
@@ -85,7 +98,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-lg md:text-xl text-[var(--foreground-light-secondary)] mb-6 max-w-2xl mx-auto leading-relaxed">
-                Korea and China dominance for market-leading teams.
+                Korea dominance for market-leading teams.
                 <br />
                 Not translated tweets. Not inflated reports.
                 <br />

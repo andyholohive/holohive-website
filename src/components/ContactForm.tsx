@@ -326,7 +326,7 @@ export default function ContactForm() {
               {/* Goals */}
               <div>
                 <label className="block text-sm font-medium text-[var(--foreground-light)] mb-2">
-                  What do you want from Korea/China? <span className="text-[var(--accent-teal)]">*</span>
+                  What do you want from Korea? <span className="text-[var(--accent-teal)]">*</span>
                 </label>
                 <textarea
                   required
@@ -334,7 +334,7 @@ export default function ContactForm() {
                   value={formData.goals}
                   onChange={(e) => setFormData({ ...formData, goals: e.target.value })}
                   className="w-full bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-xl px-4 py-3.5 text-[var(--foreground-light)] placeholder-[var(--foreground-light-secondary)] focus:border-[var(--accent-teal)] focus:ring-2 focus:ring-[var(--accent-teal)]/20 focus:outline-none transition-all resize-none"
-                  placeholder="Tell us about your goals for the Korean and Chinese markets..."
+                  placeholder="Tell us about your goals for the Korean market..."
                 />
               </div>
 

@@ -11,7 +11,7 @@ const solutions = [
     ),
     title: "Story That Works",
     description:
-      "We rebuild your narrative for how Korea and China invest. Not translation. Cultural reconstruction.",
+      "We rebuild your narrative for how Korea invests. Not translation. Cultural reconstruction.",
     color: "var(--accent)",
   },
   {
@@ -22,7 +22,7 @@ const solutions = [
     ),
     title: "On the Ground",
     description:
-      "Seoul-based team with China network. We see market shifts before they hit Western radar.",
+      "Seoul-based team with deep local networks. We see market shifts before they hit Western radar.",
     color: "var(--accent-teal)",
   },
   {
@@ -93,7 +93,7 @@ export default function Solution() {
                 </span>
               </h2>
               <p className="text-[var(--foreground-light-secondary)] text-lg mb-8 leading-relaxed">
-                We help funded Web3 projects build genuine presence in Korea and China. No shortcuts, no fake engagement.
+                We help funded Web3 projects build genuine presence in Korea. No shortcuts, no fake engagement.
               </p>
 
               {/* Anti-pitch */}
