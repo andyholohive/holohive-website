@@ -5,9 +5,9 @@ import ScrollReveal from "./ScrollReveal";
 
 const testimonials = [
   {
-    quote: "One of the few teams in Web3 we'd work with again without hesitation.",
-    name: "Kam Punia",
-    role: "CEO, Fableborne",
+    quote: "You guys have been f****** top tier. It's amazing what you guys pulled off from zero.",
+    name: "Zero",
+    role: "Space",
     image: "/people/Kam Punia.jpg",
     featured: true,
   },
