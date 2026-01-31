@@ -27,8 +27,8 @@ const vcBackers = [
   { name: "Polychain Capital", logo: "/logos/ventures/trimmed-Polychain Capital.png" },
   { name: "Dragonfly", logo: "/logos/ventures/trimmed-Drgaonfly.png" },
   { name: "Framework", logo: "/logos/ventures/trimmed-framework.png" },
-  { name: "Golden Ventures", logo: "/logos/ventures/trimmed-Golden Ventures.png" },
-  { name: "VersionOne", logo: "/logos/ventures/trimmed-versionone.png" },
+  { name: "Multicoin", logo: "/logos/ventures/trimmed-Multicoin2.png" },
+  { name: "Pantera", logo: "/logos/ventures/trimmed-Pantera2.png" },
   { name: "Coinbase", logo: "/logos/coinbase.png" },
   { name: "a16z", logo: "/logos/a16z.png" },
   { name: "Paradigm", logo: "/logos/paradigm-trimmed.png" },
@@ -97,12 +97,8 @@ export default function Hero() {
                 <span className="gradient-text">Asia.</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-[var(--foreground-light-secondary)] mb-6 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl text-[var(--foreground-light)] mb-6 max-w-2xl mx-auto leading-relaxed font-medium">
                 Korea dominance for market-leading teams.
-                <br />
-                Not translated tweets. Not inflated reports.
-                <br />
-                <span className="text-[var(--foreground-light)] font-medium">Real traction, not vanity metrics.</span>
               </p>
 
               {/* Clean CTA Buttons */}

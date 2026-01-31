@@ -5,17 +5,17 @@ import ScrollReveal from "./ScrollReveal";
 
 const testimonials = [
   {
-    quote: "You guys have been f****** top tier. It's amazing what you guys pulled off from zero.",
-    name: "Zero",
-    role: "Space",
+    quote: "One of the few teams in Web3 we'd work with again without hesitation.",
+    name: "Kam Punia",
+    role: "CEO, Fableborne",
     image: "/people/Kam Punia.jpg",
     featured: true,
   },
   {
-    quote: "Holo Hive is one of the most professional partners we have worked with.",
-    name: "Giulio Xiloyannis",
-    role: "CEO, Pixelmon",
-    image: "/people/Giulio Xiloyannis.jpeg",
+    quote: "You guys have been f****** top tier. It's amazing what you guys pulled off from zero.",
+    name: "Zero",
+    role: "Co-Founder, Space",
+    image: "/people/Kam Punia.jpg",
     featured: true,
   },
   {
