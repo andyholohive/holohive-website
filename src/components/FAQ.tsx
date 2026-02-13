@@ -4,14 +4,19 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "What makes you different?",
-    answer:
-      "Most agencies sell vanity metrics. Big numbers in a report, but nobody in the market knows who you are. We build real presence. A story that works. Distribution that counts. Our clients see results they can point to.",
-  },
-  {
     question: "How long does this take?",
     answer:
-      "Typically 3 months. You'll see early signs within the first few weeks, but real results take time. Overnight success is a lie sold by agencies who don't deliver.",
+      "90 days for the full engagement. Creators go live in the first two weeks. Traction shows up in your analytics within 30 days. If we do not hit the agreed targets, we keep going at no extra cost.",
+  },
+  {
+    question: "What does it cost?",
+    answer:
+      "Depends on scope. We will walk through it on the call. What we can say now: 100% of the creator budget goes directly to creators. We take zero cut on spend. Unused budget rolls forward.",
+  },
+  {
+    question: "We already tried Korea and it did not work.",
+    answer:
+      "That is actually how most of our engagements start. The issue is usually not Korea. It is the approach. We have taken over from agencies with zero conversions and turned it around in weeks. Happy to walk through specifics on a call.",
   },
   {
     question: "Why don't you start with a Korean Telegram right away?",
@@ -21,7 +26,12 @@ const faqs = [
   {
     question: "We already have an agency. Why would we need you?",
     answer:
-      "We're not trying to replace your agency. We're the Asia (Korea) layer. The local relationships and distribution your global agency can't provide. We work alongside whatever team you have.",
+      "We do not replace your agency. We are the Korea layer. The local relationships, creator network, and distribution your global team cannot provide from outside the market.",
+  },
+  {
+    question: "What kind of projects do you work with?",
+    answer:
+      "Funded Web3 projects with an upcoming catalyst. Token launch, exchange listing, public sale, mainnet, major partnership. If you have something happening in the next 2-6 months that Korea should know about, you are probably a fit.",
   },
 ];
 
@@ -72,11 +82,11 @@ export default function FAQ() {
               <span className="text-[var(--accent-teal)]">Reach Out</span>
             </h2>
             <p className="text-[var(--foreground-light-secondary)] mb-8 leading-relaxed">
-              We know you have questions. Here are the ones we hear most often from founders considering Asia expansion.
+              We know you have questions. Here are the ones we hear most often from founders considering Korea expansion.
             </p>
 
             {/* Quick stats */}
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-4">
               <div className="group flex items-center gap-4 bg-[#1a1a1a] rounded-xl px-5 py-4 border border-[#2a2a2a] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:border-[var(--accent-teal)]/30">
                 <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[var(--accent-teal)] to-emerald-500 flex items-center justify-center group-hover:scale-105 transition-transform shadow-md shadow-[var(--accent-teal)]/20">
                   <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -117,19 +127,19 @@ export default function FAQ() {
               >
                 <button
                   onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                  className="w-full px-6 py-5 flex items-start justify-between text-left hover:bg-[#3a3a3a]/50 transition-colors group"
+                  className="w-full px-4 sm:px-6 py-4 sm:py-5 flex items-start justify-between text-left hover:bg-[#3a3a3a]/50 transition-colors group"
                 >
-                  <div className="flex items-start gap-4">
-                    <span className={`text-sm font-mono mt-0.5 transition-colors ${
+                  <div className="flex items-start gap-2 sm:gap-4 min-w-0">
+                    <span className={`text-sm font-mono mt-0.5 flex-shrink-0 transition-colors ${
                       openIndex === index ? "text-[var(--accent-teal)]" : "text-[var(--foreground-light-secondary)]"
                     }`}>
                       {String(index + 1).padStart(2, "0")}
                     </span>
-                    <span className="font-semibold text-[var(--foreground-light)] pr-4 text-left">
+                    <span className="font-semibold text-[var(--foreground-light)] pr-2 sm:pr-4 text-left text-sm sm:text-base">
                       {faq.question}
                     </span>
                   </div>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all ${
+                  <div className={`w-7 h-7 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0 transition-all ${
                     openIndex === index
                       ? "bg-[var(--accent-teal)] text-[var(--background-dark)] rotate-180"
                       : "bg-[#3a3a3a] text-[var(--foreground-light-secondary)]"
@@ -154,7 +164,7 @@ export default function FAQ() {
                     openIndex === index ? "max-h-96" : "max-h-0"
                   }`}
                 >
-                  <div className="px-6 pb-6 pl-16">
+                  <div className="px-4 sm:px-6 pb-5 sm:pb-6 pl-10 sm:pl-16">
                     <p className="text-[var(--foreground-light-secondary)] leading-relaxed">
                       {faq.answer}
                     </p>

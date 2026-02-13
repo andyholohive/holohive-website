@@ -12,7 +12,7 @@ const testimonials = [
     featured: true,
   },
   {
-    quote: "You guys have been f****** top tier. It's amazing what you guys pulled off from zero.",
+    quote: "You guys have been f****** top tier. It's amazing what you guys pulled off.",
     name: "Zero",
     role: "Co-Founder, Space",
     image: "/people/Kam Punia.jpg",
@@ -38,6 +38,7 @@ const testimonials = [
     role: "Protocol Partnerships, The Tie",
     image: "/people/Jackson Weinreb.jpg",
     featured: false,
+    tag: "Industry Partner",
   },
   {
     quote: "I've sent several teams to Holo Hive for Asia help. Every time, great feedback.",
@@ -45,6 +46,7 @@ const testimonials = [
     role: "CEO, G3",
     image: "/people/Omar Ghanem.png",
     featured: false,
+    tag: "Industry Partner",
   },
 ];
 
@@ -72,10 +74,10 @@ export default function Proof() {
         <ScrollReveal>
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-[var(--foreground-light)]">
-              Testimonials
+              What Founders Say
             </h2>
             <p className="text-[var(--foreground-light-secondary)] max-w-xl mx-auto">
-              Don&apos;t take our word for it. Here&apos;s what founders and growth leads say about working with us.
+              From the people who signed the checks.
             </p>
           </div>
         </ScrollReveal>
@@ -141,6 +143,12 @@ export default function Proof() {
               <svg className="w-8 h-8 text-[var(--accent-teal)]/30 mb-3" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
               </svg>
+
+              {testimonial.tag && (
+                <span className="inline-block text-xs font-medium text-[var(--accent-teal)] bg-[var(--accent-teal)]/10 px-2 py-0.5 rounded-full mb-3 w-fit">
+                  {testimonial.tag}
+                </span>
+              )}
 
               <p className="text-[var(--foreground-light)] mb-4 text-sm leading-relaxed flex-grow">
                 &ldquo;{testimonial.quote}&rdquo;

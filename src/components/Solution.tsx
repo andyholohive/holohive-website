@@ -11,7 +11,7 @@ const solutions = [
     ),
     title: "Story That Works",
     description:
-      "We rebuild your narrative for how Korea invests. Not translation. Cultural reconstruction.",
+      "We rebuild your narrative for how Korea invests. Different market psychology, different entry points, different trust signals.",
     color: "var(--accent)",
   },
   {
@@ -31,17 +31,15 @@ const solutions = [
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
       </svg>
     ),
-    title: "High-Signal Distribution",
+    title: "Creators Who Convert",
     description:
-      "Access to creators who move markets. Vetted for quality, not follower counts.",
+      "Exclusive access to Korea's top crypto creators. Vetted for influence that moves capital, not just follower counts.",
     color: "var(--accent-blue)",
   },
 ];
 
 const antiPitch = [
-  "We don't sell impressions",
-  "We don't promise overnight miracles",
-  "We don't work with everyone",
+  "We are selective. 3-4 partners per quarter. If the timing or fit is off, we will tell you.",
 ];
 
 export default function Solution() {
@@ -75,7 +73,7 @@ export default function Solution() {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12">
           {/* Left Column - Header */}
           <div className="lg:sticky lg:top-24 self-start">
             <ScrollReveal>
@@ -87,13 +85,13 @@ export default function Solution() {
                 What We Do
               </span>
               <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground-light)] mb-6 leading-tight">
-                Real Traction,{" "}
+                How It{" "}
                 <span className="text-[var(--accent-teal)]">
-                  Not Vanity Metrics
+                  Works
                 </span>
               </h2>
               <p className="text-[var(--foreground-light-secondary)] text-lg mb-8 leading-relaxed">
-                We help funded Web3 projects build genuine presence in Korea. No shortcuts, no fake engagement.
+                We reposition your narrative for the Korean market, then activate Korea&apos;s top creators to carry it. Not as sponsored posts. As trusted voices who back your project with their own reputation. We build the path from attention to conversion, so Korean users have a clear way into whatever you are launching.
               </p>
 
               {/* Anti-pitch */}
@@ -116,7 +114,7 @@ export default function Solution() {
           <div className="space-y-5">
             {solutions.map((solution, index) => (
               <ScrollReveal key={index} delay={index * 150}>
-                <div className="group relative bg-gradient-to-br from-[#2a2a2a] to-[#1f1f1f] border border-[#3a3a3a] rounded-2xl p-6 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[var(--accent-teal)]/10 hover:-translate-y-2 hover:border-[var(--accent-teal)]/40">
+                <div className="group relative bg-gradient-to-br from-[#2a2a2a] to-[#1f1f1f] border border-[#3a3a3a] rounded-2xl p-5 sm:p-6 overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-[var(--accent-teal)]/10 hover:-translate-y-2 hover:border-[var(--accent-teal)]/40">
                   {/* Gradient glow on hover */}
                   <div
                     className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
@@ -163,7 +161,7 @@ export default function Solution() {
                   href="#contact"
                   className="btn-primary inline-flex items-center gap-2 group"
                 >
-                  Start a conversation
+                  Talk to Us
                   <svg
                     className="w-4 h-4 transition-transform group-hover:translate-x-1"
                     fill="none"

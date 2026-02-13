@@ -8,29 +8,29 @@ const calendarIcon = (
 
 const steps = [
   {
-    month: "Phase 1",
+    month: "Week 1-2",
     title: "Foundation",
     description:
-      "We analyze your positioning and rebuild it for Asia. What story are we telling? What makes you matter here?",
+      "We analyze your positioning and rebuild it for Korea. What angle resonates. What story gets creators invested. What makes Korean audiences care.",
     tasks: ["Market Analysis", "Narrative Development", "Competitive Positioning"],
     icon: calendarIcon,
     color: "var(--accent)",
   },
   {
-    month: "Phase 2",
+    month: "Week 2-4",
     title: "Seeding",
     description:
       "We build awareness through creators who explain why your project matters. Credibility before conversion.",
-    tasks: ["Creator Outreach", "Content Seeding", "Community Building"],
+    tasks: ["Creator Activation", "Content Seeding", "Trust Building"],
     icon: calendarIcon,
     color: "var(--accent-teal)",
   },
   {
-    month: "Phase 3+",
+    month: "Month 2-3",
     title: "Amplification",
     description:
-      "Once the market is paying attention, we push harder with coordinated campaigns to the people who matter.",
-    tasks: ["Campaign Launch", "KOL Partnerships", "Performance Optimization"],
+      "Once there is traction, we scale it. Coordinated campaigns, conversion paths, and performance tracking against the metrics that matter to you.",
+    tasks: ["Campaign Launch", "Conversion Paths", "Performance Optimization"],
     icon: calendarIcon,
     color: "var(--accent-blue)",
   },
@@ -79,7 +79,7 @@ export default function Process() {
               <span className="gradient-text">Results</span>
             </h2>
             <p className="text-[var(--foreground-light-secondary)] text-lg">
-              No black boxes. A structured approach that builds real presence in Asia.
+              No black boxes. A structured approach that builds real presence in Korea.
             </p>
           </div>
         </ScrollReveal>
@@ -88,15 +88,15 @@ export default function Process() {
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Vertical line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-[var(--border-dark)] md:-translate-x-px" />
+            <div className="absolute left-6 sm:left-8 md:left-1/2 top-0 bottom-0 w-px bg-[var(--border-dark)] md:-translate-x-px" />
 
             {steps.map((step, index) => (
-              <ScrollReveal key={index} delay={index * 200}>
-                <div className={`relative flex items-start gap-8 mb-8 last:mb-0 ${
+              <ScrollReveal key={index} delay={index * 200} className={index < steps.length - 1 ? "mb-10 sm:mb-0" : ""}>
+                <div className={`relative flex items-start gap-8 sm:mb-8 last:mb-0 ${
                   index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}>
                   {/* Timeline node */}
-                  <div className="absolute left-8 md:left-1/2 -translate-x-1/2 z-10">
+                  <div className="absolute left-6 sm:left-8 md:left-1/2 -translate-x-1/2 z-10">
                     <div
                       className="w-4 h-4 rounded-full pulse-glow"
                       style={{ backgroundColor: step.color }}
@@ -104,7 +104,7 @@ export default function Process() {
                   </div>
 
                   {/* Content */}
-                  <div className={`flex-1 ml-20 md:ml-0 ${
+                  <div className={`flex-1 ml-14 sm:ml-20 md:ml-0 ${
                     index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"
                   }`}>
                     <div className={`relative group bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-2xl p-6 card-hover ${
@@ -164,6 +164,20 @@ export default function Process() {
           </div>
         </div>
 
+        {/* Guarantee */}
+        <ScrollReveal delay={500}>
+          <div className="max-w-4xl mx-auto mt-10 text-center">
+            <div className="inline-flex items-center gap-3 bg-[var(--accent-teal)]/10 border border-[var(--accent-teal)]/20 rounded-full px-6 py-3">
+              <svg className="w-5 h-5 text-[var(--accent-teal)] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
+              <span className="text-[var(--foreground-light)] text-sm md:text-base font-medium">
+                If we do not hit the agreed metrics by Day 90, we keep working at no extra cost until we do.
+              </span>
+            </div>
+          </div>
+        </ScrollReveal>
+
         {/* CTA */}
         <ScrollReveal delay={600}>
           <div className="text-center mt-16">
@@ -171,7 +185,7 @@ export default function Process() {
               href="#contact"
               className="btn-primary inline-flex items-center gap-2 group"
             >
-              Get Started
+              Talk to Us
               <svg
                 className="w-4 h-4 transition-transform group-hover:translate-x-1"
                 fill="none"

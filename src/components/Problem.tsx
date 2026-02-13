@@ -15,7 +15,7 @@ const problems = [
     number: "02",
     title: "The Translation Trap",
     description:
-      "You translated your tweets and called it marketing. It's not. Without local context, you're just noise. Everyone scrolls right past.",
+      "You translated your tweets and called it marketing. Korean investors scroll right past. Without local context and local voices, you are background noise.",
     stat: "0.1%",
     statLabel: "engagement on translated content",
   },
@@ -23,7 +23,7 @@ const problems = [
     number: "03",
     title: "The Vanity Metric Trap",
     description:
-      "Your agency or team sends reports with millions of impressions. But nobody in Asia knows who you are. You're paying for numbers, not results.",
+      "Your agency sends reports with millions of impressions. Nobody in Korea knows who you are. You are paying for screenshots in a PDF.",
     stat: "10M+",
     statLabel: "impressions with zero conversions",
   },
@@ -53,11 +53,11 @@ export default function Problem() {
               The Reality
             </span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-[var(--foreground-light)] mb-6">
-              Why Most Western Projects <br className="hidden md:block" />
-              <span className="text-[var(--foreground-light-secondary)]">Fail in Asia</span>
+              Why Most Projects <br className="hidden md:block" />
+              <span className="text-[var(--foreground-light-secondary)]">Burn Money in Korea</span>
             </h2>
             <p className="text-[var(--foreground-light-secondary)] max-w-2xl mx-auto">
-              These are the patterns we see over and over. Projects that spend months and millions, only to leave Asia with nothing to show for it.
+              These are the patterns we see over and over. Projects that spend months and hundreds of thousands in Korea with nothing to show for it.
             </p>
           </div>
         </ScrollReveal>
@@ -112,7 +112,7 @@ export default function Problem() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
-          <p className="text-[var(--foreground-light)] text-lg font-medium mb-6">Sound familiar? There&apos;s a better way.</p>
+          <p className="text-[var(--foreground-light)] text-lg font-medium mb-6">Sound familiar? Here is what actually works.</p>
           <a href="#solution" className="inline-flex items-center gap-2 text-[var(--accent-teal)] font-medium hover:gap-3 transition-all">
             See what actually works
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

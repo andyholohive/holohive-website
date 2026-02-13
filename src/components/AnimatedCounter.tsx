@@ -32,7 +32,7 @@ export default function AnimatedCounter({ value, className = "" }: AnimatedCount
 
   const animateValue = () => {
     // Parse the value to extract number, prefix, and suffix
-    const match = value.match(/^(\$)?(\d+)(B|\+|%)?$/);
+    const match = value.match(/^(\$)?(\d+\.?\d*)(M|K|B|X|\+|%)?$/);
 
     if (!match) {
       // If it doesn't match (like "Seoul"), just show the value
@@ -41,19 +41,21 @@ export default function AnimatedCounter({ value, className = "" }: AnimatedCount
     }
 
     const prefix = match[1] || "";
-    const targetNumber = parseInt(match[2], 10);
+    const targetNumber = parseFloat(match[2]);
     const suffix = match[3] || "";
+    const hasDecimal = match[2].includes(".");
+    const decimalPlaces = hasDecimal ? match[2].split(".")[1].length : 0;
 
     const duration = 2000; // 2 seconds
     const steps = 60;
     const increment = targetNumber / steps;
-    let current = 0;
     let step = 0;
 
     const timer = setInterval(() => {
       step++;
-      current = Math.min(Math.round(increment * step), targetNumber);
-      setDisplayValue(`${prefix}${current}${suffix}`);
+      const current = Math.min(increment * step, targetNumber);
+      const formatted = hasDecimal ? current.toFixed(decimalPlaces) : Math.round(current).toString();
+      setDisplayValue(`${prefix}${formatted}${suffix}`);
 
       if (step >= steps) {
         clearInterval(timer);

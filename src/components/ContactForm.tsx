@@ -83,6 +83,7 @@ function CustomDropdown({ label, placeholder, options, value, onChange, required
   );
 }
 
+const catalystOptions = ["Token Launch", "Exchange Listing", "Public Sale", "Mainnet", "Partnership", "Other"];
 const roleOptions = ["Founder", "CMO / Marketing Lead", "Head of Growth", "BD / Partnerships", "Other"];
 const fundingOptions = ["Under $2M", "$2M - $10M", "$10M - $30M", "$30M+"];
 const tokenOptions = ["Live", "TGE Pending", "No Token"];
@@ -91,6 +92,8 @@ const timelineOptions = ["Urgent (within 2 weeks)", "Soon (1-2 months)", "Planni
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     projectName: "",
+    projectUrl: "",
+    catalyst: "",
     yourName: "",
     role: "",
     email: "",
@@ -121,6 +124,8 @@ export default function ContactForm() {
         .from("contact_submissions")
         .insert({
           project_name: formData.projectName,
+          project_url: formData.projectUrl,
+          catalyst: formData.catalyst,
           name: formData.yourName,
           role: formData.role,
           email: formData.email,
@@ -162,29 +167,34 @@ export default function ContactForm() {
                 </svg>
               </div>
               <h3 className="text-3xl font-bold text-[var(--foreground-light)] mb-4">
-                {isHotLead ? "Great! Let's schedule a call" : "Thanks for reaching out!"}
+                Received.
               </h3>
-              <p className="text-[var(--foreground-light-secondary)] text-lg mb-8">
-                {isHotLead
-                  ? "Your project looks like a great fit. Book a time that works for you."
-                  : "We'd love to chat. Pick a time below to schedule a call with our team."}
+              <p className="text-[var(--foreground-light-secondary)] text-lg mb-10">
+                We will review your project and respond within 48 hours.
               </p>
 
-              {/* Calendly Embed */}
-              <div className="bg-white rounded-2xl overflow-hidden shadow-2xl">
-                <iframe
-                  src={calendlyUrl}
-                  width="100%"
-                  height="700"
-                  frameBorder="0"
-                  title="Schedule a call"
-                  className="w-full"
-                />
+              {/* Calendly CTA */}
+              <div className="bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-2xl p-5 sm:p-8 mb-6">
+                <p className="text-[var(--foreground-light)] font-medium mb-4">
+                  Want to skip the wait? Book a call now.
+                </p>
+                <a
+                  href={calendlyUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary inline-flex items-center gap-2 group"
+                >
+                  Schedule a Call
+                  <svg
+                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </a>
               </div>
-
-              <p className="text-[var(--foreground-light-secondary)] text-sm mt-6">
-                Prefer email? We&apos;ll also respond to your submission within 48 hours.
-              </p>
             </div>
           </ScrollReveal>
         </div>
@@ -236,6 +246,29 @@ export default function ContactForm() {
                     placeholder="Your project"
                   />
                 </div>
+
+                {/* Project Website or X */}
+                <div>
+                  <label className="block text-sm font-medium text-[var(--foreground-light)] mb-2">
+                    Project Website or X
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.projectUrl}
+                    onChange={(e) => setFormData({ ...formData, projectUrl: e.target.value })}
+                    className="w-full bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-xl px-4 py-3.5 text-[var(--foreground-light)] placeholder-[var(--foreground-light-secondary)] focus:border-[var(--accent-teal)] focus:ring-2 focus:ring-[var(--accent-teal)]/20 focus:outline-none transition-all"
+                    placeholder="https://yourproject.com or @handle"
+                  />
+                </div>
+
+                {/* Upcoming Catalyst */}
+                <CustomDropdown
+                  label="Upcoming Catalyst"
+                  placeholder="Select catalyst"
+                  options={catalystOptions}
+                  value={formData.catalyst}
+                  onChange={(value) => setFormData({ ...formData, catalyst: value })}
+                />
 
                 {/* Your Name */}
                 <div>
@@ -358,7 +391,7 @@ export default function ContactForm() {
               </button>
 
               <p className="text-center text-[var(--foreground-light-secondary)] text-sm">
-                We cap our active roster at 5 partners per quarter to ensure depth. If timing doesn't work now, we'll tell you.
+                We take 3-4 partners per quarter. If the timing is off, we will tell you.
               </p>
             </form>
           </ScrollReveal>
