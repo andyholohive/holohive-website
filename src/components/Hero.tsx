@@ -11,19 +11,21 @@ const banners = [
 ];
 
 const clients = [
-  { name: "*Space", logo: "", testimonial: "You guys have been top tier.", color: "#FFFFFF", svg: true },
-  { name: "Fableborne", logo: "/logos/fableborne.png", testimonial: "One of the few teams we'd work with again without hesitation.", color: "#D4AF37", grayscale: true },
-  { name: "Flying Tulip", logo: "/logos/flying-tulip.png", testimonial: "Excellent execution in the Korean market.", color: "#E11D48" },
-  { name: "OKX", logo: "/logos/okx.png", testimonial: "Exceptional execution and deep market understanding.", color: "#2a2a2a" },
+  // Row 1
   { name: "Avalanche", logo: "/logos/avalanche2.png", testimonial: "Holo Hive's help on MapleStory's launch was invaluable.", color: "#E84142", grayscale: true },
+  { name: "OKX", logo: "/logos/okx.png", testimonial: "Exceptional execution and deep market understanding.", color: "#2a2a2a" },
   { name: "MapleStory", logo: "/logos/maplestory2.png", testimonial: "They helped us navigate the Korean market with precision.", color: "#FF9900" },
-  { name: "Doodles", logo: "/logos/doodles-2.png", testimonial: "Professional team that delivers real results.", color: "#62B7E4", grayscale: true },
-  { name: "MON Protocol", logo: "/logos/monprotocol2-trimmed.png", testimonial: "One of the most professional partners we've worked with.", color: "#2a2a2a", grayscale: true },
-  { name: "Zetachain", logo: "/logos/zetachain2.png", testimonial: "Deep understanding of the APAC crypto landscape.", color: "#00BC8B" },
-  { name: "Magic Eden", logo: "/logos/magic-eden2-trimmed.png", testimonial: "Strong relationships and flawless execution.", color: "#E42575" },
-  { name: "0G Labs", logo: "/logos/0g.png", testimonial: "A team that truly understands the Korean market.", color: "#7C3AED" },
   { name: "Ledger", logo: "/logos/ledger.png", testimonial: "Professional and results-driven.", color: "#FF5300" },
+  // Row 2
+  { name: "Doodles", logo: "/logos/doodles-2.png", testimonial: "Professional team that delivers real results.", color: "#62B7E4", grayscale: true, large: true },
+  { name: "Flying Tulip", logo: "/logos/flying-tulip.png", testimonial: "Excellent execution in the Korean market.", color: "#E11D48" },
+  { name: "0G Labs", logo: "/logos/0g.png", testimonial: "A team that truly understands the Korean market.", color: "#7C3AED" },
+  { name: "Zetachain", logo: "/logos/zetachain2.png", testimonial: "Deep understanding of the APAC crypto landscape.", color: "#00BC8B" },
+  // Row 3
   { name: "NRN", logo: "/logos/nrn-agents.png", testimonial: "Great partners for Asia expansion.", color: "#4ADE80" },
+  { name: "MON Protocol", logo: "/logos/monprotocol2-trimmed.png", testimonial: "One of the most professional partners we've worked with.", color: "#2a2a2a", grayscale: true },
+  { name: "Fableborne", logo: "/logos/fableborne.png", testimonial: "One of the few teams we'd work with again without hesitation.", color: "#D4AF37", grayscale: true },
+  { name: "Space", logo: "", testimonial: "You guys have been top tier.", color: "#FFFFFF", svg: true },
 ];
 
 const vcBackers = [
@@ -117,9 +119,15 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
                 <a
                   href="#results"
-                  className="btn-primary text-base inline-flex items-center justify-center gap-2 group"
+                  className="bg-[#2a2a2a] border border-[#3a3a3a] text-[var(--foreground-light)] hover:border-[var(--accent-teal)] hover:text-[var(--accent-teal)] px-8 py-3 rounded-lg font-semibold transition-all text-base inline-flex items-center justify-center gap-2"
                 >
                   See Results
+                </a>
+                <a
+                  href="#contact"
+                  className="btn-primary text-base inline-flex items-center justify-center gap-2 group"
+                >
+                  Talk to Us
                   <svg
                     className="w-4 h-4 transition-transform group-hover:translate-x-1"
                     fill="none"
@@ -128,12 +136,6 @@ export default function Hero() {
                   >
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                   </svg>
-                </a>
-                <a
-                  href="#contact"
-                  className="bg-[#2a2a2a] border border-[#3a3a3a] text-[var(--foreground-light)] hover:border-[var(--accent-teal)] hover:text-[var(--accent-teal)] px-8 py-3 rounded-lg font-semibold transition-all text-base inline-flex items-center justify-center gap-2"
-                >
-                  Talk to Us
                 </a>
               </div>
 
@@ -193,7 +195,7 @@ export default function Hero() {
                       alt={client.name}
                       width={160}
                       height={56}
-                      className={`max-h-12 max-w-[140px] object-contain opacity-70 group-hover:opacity-100 transition-opacity ${client.grayscale ? 'grayscale' : 'brightness-0 invert'}`}
+                      className={`${client.large ? 'max-h-16 max-w-[180px]' : 'max-h-12 max-w-[140px]'} object-contain opacity-70 group-hover:opacity-100 transition-opacity ${client.grayscale ? 'grayscale' : 'brightness-0 invert'}`}
                     />
                   )}
                 </div>

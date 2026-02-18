@@ -113,12 +113,28 @@ export default function Problem() {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <p className="text-[var(--foreground-light)] text-lg font-medium mb-6">Sound familiar? Here is what actually works.</p>
-          <a href="#solution" className="inline-flex items-center gap-2 text-[var(--accent-teal)] font-medium hover:gap-3 transition-all">
+          <a href="#solution" className="inline-flex items-center gap-2 text-[var(--accent-teal)] font-medium hover:gap-3 transition-all mb-6">
             See what actually works
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
           </a>
+          <div>
+            <a
+              href="#contact"
+              className="btn-primary inline-flex items-center gap-2 group"
+            >
+              Talk to Us
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>

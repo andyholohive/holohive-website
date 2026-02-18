@@ -174,13 +174,27 @@ export default function FAQ() {
             ))}
 
             {/* More questions CTA */}
-            <div className="text-center pt-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
               <p className="text-[var(--foreground-light-secondary)] text-sm">
                 Have a different question?{" "}
                 <a href="#contact" className="text-[var(--accent-teal)] hover:underline">
                   Ask us directly
                 </a>
               </p>
+              <a
+                href="#contact"
+                className="btn-primary inline-flex items-center gap-2 group text-sm"
+              >
+                Talk to Us
+                <svg
+                  className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>

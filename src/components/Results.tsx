@@ -90,6 +90,26 @@ export default function Results() {
             </ScrollReveal>
           ))}
         </div>
+
+        {/* CTA */}
+        <ScrollReveal delay={500}>
+          <div className="text-center mt-16">
+            <a
+              href="#contact"
+              className="btn-primary inline-flex items-center gap-2 group"
+            >
+              Talk to Us
+              <svg
+                className="w-4 h-4 transition-transform group-hover:translate-x-1"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+          </div>
+        </ScrollReveal>
       </div>
     </section>
   );

@@ -15,7 +15,7 @@ const testimonials = [
     quote: "You guys have been f****** top tier. It's amazing what you guys pulled off.",
     name: "Zero",
     role: "Co-Founder, Space",
-    image: "/people/Kam Punia.jpg",
+    image: "/logos/space_pf.jpeg",
     featured: true,
   },
   {
@@ -33,20 +33,27 @@ const testimonials = [
     featured: false,
   },
   {
-    quote: "Deep understanding of how to launch in this space. I feel good sending clients their way.",
+    quote: "I've introduced Holo Hive to several teams looking to scale. Every time, it's been a smooth experience with great feedback.",
+    name: "Omar Ghanem",
+    role: "G3",
+    image: "/people/Omar Ghanem.png",
+    featured: false,
+    tag: "Industry Partner",
+  },
+  {
+    quote: "Holo Hive's deep understanding of web3 GTM, combined with a powerful KOL network, allows me to feel confident referring clients to them. Their team brings the perfect mix of strategy, execution, and genuine care for outcomes.",
     name: "Jackson Weinreb",
-    role: "Protocol Partnerships, The Tie",
+    role: "YieldFi",
     image: "/people/Jackson Weinreb.jpg",
     featured: false,
     tag: "Industry Partner",
   },
   {
-    quote: "I've sent several teams to Holo Hive for Asia help. Every time, great feedback.",
-    name: "Omar Ghanem",
-    role: "CEO, G3",
-    image: "/people/Omar Ghanem.png",
+    quote: "Holo Hive is one of the most professional partners we have worked with. Very happy with the relationship and work done together.",
+    name: "Guilio Xiloyannis",
+    role: "CEO & Founder, MON Protocol",
+    image: "/people/Giulio Xiloyannis.jpeg",
     featured: false,
-    tag: "Industry Partner",
   },
 ];
 
@@ -133,7 +140,7 @@ export default function Proof() {
 
 
         {/* Other Testimonials - Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
           {otherTestimonials.map((testimonial, index) => (
             <div
               key={index}
@@ -169,6 +176,8 @@ export default function Proof() {
             </div>
           ))}
         </div>
+
+
       </div>
     </section>
   );
