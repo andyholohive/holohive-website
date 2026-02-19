@@ -153,14 +153,14 @@ export default function ContactForm() {
     (formData.timeline === "Urgent (within 2 weeks)" || formData.timeline === "Soon (1-2 months)");
 
   if (submitted) {
-    // Calendly URL with prefilled name and email
-    const calendlyUrl = `https://calendly.com/jdothamilton?name=${encodeURIComponent(formData.yourName)}&email=${encodeURIComponent(formData.email)}`;
+    // Calendly URL - goes directly to calendar view with prefilled name and email
+    const calendlyUrl = `https://calendly.com/jdothamilton/call?name=${encodeURIComponent(formData.yourName)}&email=${encodeURIComponent(formData.email)}&back=1`;
 
     return (
       <section id="contact" className="section-padding relative overflow-hidden bg-gradient-to-b from-[#0a0a0a] to-[#0a0a0a]">
         <div className="container-custom relative z-10">
           <ScrollReveal>
-            <div className="max-w-2xl mx-auto text-center">
+            <div className="max-w-3xl mx-auto text-center">
               <div className="w-20 h-20 bg-[var(--accent-teal)]/20 rounded-full flex items-center justify-center mx-auto mb-6 pulse-glow">
                 <svg className="w-10 h-10 text-[var(--accent-teal)]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
@@ -170,30 +170,19 @@ export default function ContactForm() {
                 Received.
               </h3>
               <p className="text-[var(--foreground-light-secondary)] text-lg mb-10">
-                We will review your project and respond within 48 hours.
+                We will review your project and respond within 48 hours. Want to skip the wait? Book a call now.
               </p>
 
-              {/* Calendly CTA */}
-              <div className="bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-2xl p-5 sm:p-8 mb-6">
-                <p className="text-[var(--foreground-light)] font-medium mb-4">
-                  Want to skip the wait? Book a call now.
-                </p>
-                <a
-                  href={calendlyUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary inline-flex items-center gap-2 group"
-                >
-                  Schedule a Call
-                  <svg
-                    className="w-4 h-4 transition-transform group-hover:translate-x-1"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </a>
+              {/* Calendly Inline Embed */}
+              <div className="bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-2xl overflow-hidden mb-6">
+                <iframe
+                  src={calendlyUrl}
+                  width="100%"
+                  height="700"
+                  frameBorder="0"
+                  title="Schedule a call"
+                  className="rounded-2xl"
+                />
               </div>
             </div>
           </ScrollReveal>
