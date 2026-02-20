@@ -83,23 +83,19 @@ function CustomDropdown({ label, placeholder, options, value, onChange, required
   );
 }
 
-const catalystOptions = ["Token Launch", "Exchange Listing", "Public Sale", "Mainnet", "Partnership", "Other"];
 const roleOptions = ["Founder", "CMO / Marketing Lead", "Head of Growth", "BD / Partnerships", "Other"];
 const fundingOptions = ["Under $2M", "$2M - $10M", "$10M - $30M", "$30M+"];
-const tokenOptions = ["Live", "TGE Pending", "No Token"];
 const timelineOptions = ["Urgent (within 2 weeks)", "Soon (1-2 months)", "Planning (3+ months)", "No specific launch"];
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    projectName: "",
-    projectUrl: "",
-    catalyst: "",
-    yourName: "",
-    role: "",
+    firstName: "",
+    lastName: "",
+    company: "",
     email: "",
+    role: "",
     telegram: "",
     funding: "",
-    tokenStatus: "",
     timeline: "",
     goals: "",
   });
@@ -123,15 +119,12 @@ export default function ContactForm() {
       const { error } = await supabase
         .from("contact_submissions")
         .insert({
-          project_name: formData.projectName,
-          project_url: formData.projectUrl,
-          catalyst: formData.catalyst,
-          name: formData.yourName,
-          role: formData.role,
+          name: `${formData.firstName} ${formData.lastName}`.trim(),
+          project_name: formData.company,
           email: formData.email,
+          role: formData.role,
           telegram: formData.telegram,
           funding: formData.funding,
-          token_status: formData.tokenStatus,
           timeline: formData.timeline,
           goals: formData.goals,
         });
@@ -151,10 +144,11 @@ export default function ContactForm() {
   // Check if this is a "hot" lead (high funding + urgent timeline)
   const isHotLead = (formData.funding === "$10M - $30M" || formData.funding === "$30M+") &&
     (formData.timeline === "Urgent (within 2 weeks)" || formData.timeline === "Soon (1-2 months)");
+  void isHotLead;
 
   if (submitted) {
     // Calendly URL - goes directly to calendar view with prefilled name and email
-    const calendlyUrl = `https://calendly.com/jdothamilton/call?name=${encodeURIComponent(formData.yourName)}&email=${encodeURIComponent(formData.email)}&back=1`;
+    const calendlyUrl = `https://calendly.com/jdothamilton/call?name=${encodeURIComponent(`${formData.firstName} ${formData.lastName}`.trim())}&email=${encodeURIComponent(formData.email)}&back=1`;
 
     return (
       <section id="contact" className="section-padding relative overflow-hidden bg-gradient-to-b from-[#0a0a0a] to-[#0a0a0a]">
@@ -221,68 +215,50 @@ export default function ContactForm() {
           <ScrollReveal delay={200}>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
-                {/* Project Name */}
+                {/* First Name */}
                 <div>
                   <label className="block text-sm font-medium text-[var(--foreground-light)] mb-2">
-                    Project Name <span className="text-[var(--accent-teal)]">*</span>
+                    First Name <span className="text-[var(--accent-teal)]">*</span>
                   </label>
                   <input
                     type="text"
                     required
-                    value={formData.projectName}
-                    onChange={(e) => setFormData({ ...formData, projectName: e.target.value })}
+                    value={formData.firstName}
+                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     className="w-full bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-xl px-4 py-3.5 text-[var(--foreground-light)] placeholder-[var(--foreground-light-secondary)] focus:border-[var(--accent-teal)] focus:ring-2 focus:ring-[var(--accent-teal)]/20 focus:outline-none transition-all"
-                    placeholder="Your project"
+                    placeholder="John"
                   />
                 </div>
 
-                {/* Project Website or X */}
+                {/* Last Name */}
                 <div>
                   <label className="block text-sm font-medium text-[var(--foreground-light)] mb-2">
-                    Project Website or X
-                  </label>
-                  <input
-                    type="text"
-                    value={formData.projectUrl}
-                    onChange={(e) => setFormData({ ...formData, projectUrl: e.target.value })}
-                    className="w-full bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-xl px-4 py-3.5 text-[var(--foreground-light)] placeholder-[var(--foreground-light-secondary)] focus:border-[var(--accent-teal)] focus:ring-2 focus:ring-[var(--accent-teal)]/20 focus:outline-none transition-all"
-                    placeholder="https://yourproject.com or @handle"
-                  />
-                </div>
-
-                {/* Upcoming Catalyst */}
-                <CustomDropdown
-                  label="Upcoming Catalyst"
-                  placeholder="Select catalyst"
-                  options={catalystOptions}
-                  value={formData.catalyst}
-                  onChange={(value) => setFormData({ ...formData, catalyst: value })}
-                />
-
-                {/* Your Name */}
-                <div>
-                  <label className="block text-sm font-medium text-[var(--foreground-light)] mb-2">
-                    Your Name <span className="text-[var(--accent-teal)]">*</span>
+                    Last Name <span className="text-[var(--accent-teal)]">*</span>
                   </label>
                   <input
                     type="text"
                     required
-                    value={formData.yourName}
-                    onChange={(e) => setFormData({ ...formData, yourName: e.target.value })}
+                    value={formData.lastName}
+                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     className="w-full bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-xl px-4 py-3.5 text-[var(--foreground-light)] placeholder-[var(--foreground-light-secondary)] focus:border-[var(--accent-teal)] focus:ring-2 focus:ring-[var(--accent-teal)]/20 focus:outline-none transition-all"
-                    placeholder="John Doe"
+                    placeholder="Doe"
                   />
                 </div>
 
-                {/* Role */}
-                <CustomDropdown
-                  label="Role"
-                  placeholder="Select your role"
-                  options={roleOptions}
-                  value={formData.role}
-                  onChange={(value) => setFormData({ ...formData, role: value })}
-                  required
-                />
+                {/* Company */}
+                <div>
+                  <label className="block text-sm font-medium text-[var(--foreground-light)] mb-2">
+                    Company <span className="text-[var(--accent-teal)]">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    required
+                    value={formData.company}
+                    onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                    className="w-full bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-xl px-4 py-3.5 text-[var(--foreground-light)] placeholder-[var(--foreground-light-secondary)] focus:border-[var(--accent-teal)] focus:ring-2 focus:ring-[var(--accent-teal)]/20 focus:outline-none transition-all"
+                    placeholder="Your company"
+                  />
+                </div>
 
                 {/* Email */}
                 <div>
@@ -295,9 +271,19 @@ export default function ContactForm() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-xl px-4 py-3.5 text-[var(--foreground-light)] placeholder-[var(--foreground-light-secondary)] focus:border-[var(--accent-teal)] focus:ring-2 focus:ring-[var(--accent-teal)]/20 focus:outline-none transition-all"
-                    placeholder="you@project.com"
+                    placeholder="you@company.com"
                   />
                 </div>
+
+                {/* Role */}
+                <CustomDropdown
+                  label="Role"
+                  placeholder="Select your role"
+                  options={roleOptions}
+                  value={formData.role}
+                  onChange={(value) => setFormData({ ...formData, role: value })}
+                  required
+                />
 
                 {/* Telegram */}
                 <div>
@@ -321,16 +307,6 @@ export default function ContactForm() {
                   options={fundingOptions}
                   value={formData.funding}
                   onChange={(value) => setFormData({ ...formData, funding: value })}
-                  required
-                />
-
-                {/* Token Status */}
-                <CustomDropdown
-                  label="Token Status"
-                  placeholder="Select status"
-                  options={tokenOptions}
-                  value={formData.tokenStatus}
-                  onChange={(value) => setFormData({ ...formData, tokenStatus: value })}
                   required
                 />
 
@@ -375,7 +351,7 @@ export default function ContactForm() {
                     Submitting...
                   </span>
                 ) : (
-                  "Submit Application"
+                  "Continue"
                 )}
               </button>
 
