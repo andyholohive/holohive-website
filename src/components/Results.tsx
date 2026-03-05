@@ -27,7 +27,7 @@ const results = [
     value: "3X",
     label: "Conversion vs. Every Other Region",
     context:
-      "$200M seed. $1B valuation. Korea outperformed every market they launched in.",
+      "$200M seed. $1B valuation. Founded by Andre Cronje. Korea outperformed every market they launched in.",
     quote: null,
     attribution: null,
   },

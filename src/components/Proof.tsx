@@ -28,14 +28,14 @@ const testimonials = [
   {
     quote: "Top-tier relationships, always professional. Nothing but good things to say.",
     name: "Adam Fern",
-    role: "Co-Founder, Proof of Play",
+    role: "Robinhood",
     image: "/people/Adam Fern.jpg",
     featured: false,
   },
   {
     quote: "I've introduced Holo Hive to several teams looking to scale. Every time, it's been a smooth experience with great feedback.",
     name: "Omar Ghanem",
-    role: "G3",
+    role: "Founder, G3",
     image: "/people/Omar Ghanem.png",
     featured: false,
     tag: "Industry Partner",
@@ -43,7 +43,7 @@ const testimonials = [
   {
     quote: "Holo Hive's deep understanding of web3 GTM, combined with a powerful KOL network, allows me to feel confident referring clients to them. Their team brings the perfect mix of strategy, execution, and genuine care for outcomes.",
     name: "Jackson Weinreb",
-    role: "YieldFi",
+    role: "The Tie",
     image: "/people/Jackson Weinreb.jpg",
     featured: false,
     tag: "Industry Partner",
