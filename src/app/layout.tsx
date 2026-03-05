@@ -9,9 +9,13 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://holohive.io"),
   title: "Holo Hive | Korea Market Activation for Web3 Projects",
   description: "Korea market activation for funded Web3 projects. $21.5M in presale deposits. $65K raised in 6 days. Seoul-based. 100+ launches.",
   keywords: ["Web3", "Korea", "crypto marketing", "Korea expansion", "blockchain", "Web3 growth"],
+  alternates: {
+    canonical: "https://holohive.io",
+  },
   openGraph: {
     title: "Holo Hive | Korea Market Activation for Web3 Projects",
     description: "Korea market activation for funded Web3 projects. $21.5M in presale deposits. $65K raised in 6 days. Seoul-based. 100+ launches.",
@@ -20,7 +24,7 @@ export const metadata: Metadata = {
     url: "https://holohive.io",
     images: [
       {
-        url: "/og-background.jpeg",
+        url: "https://holohive.io/og-background.jpeg",
         width: 1200,
         height: 630,
         alt: "Holo Hive - Korea Market Activation for Web3 Projects",
@@ -31,7 +35,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Holo Hive | Korea Market Activation for Web3 Projects",
     description: "Korea market activation for funded Web3 projects. $21.5M in presale deposits. $65K raised in 6 days. Seoul-based. 100+ launches.",
-    images: ["/og-background.jpeg"],
+    images: ["https://holohive.io/og-background.jpeg"],
   },
 };
 
