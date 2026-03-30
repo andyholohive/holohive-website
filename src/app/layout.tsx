@@ -123,6 +123,17 @@ export default function RootLayout({
             }),
           }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Holo Hive",
+              url: "https://holohive.io",
+            }),
+          }}
+        />
       </head>
       <body className={`${inter.variable} antialiased`}>
         {children}
