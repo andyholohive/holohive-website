@@ -8,6 +8,8 @@ const banners = [
   "Flying Tulip: 3X conversion in Korea vs. every other region",
   "$65K raised through Korean creators in 6 days",
   "$21.5M in presale deposits. Zero prior Korean presence.",
+  "Lore: 3-year+ partnership",
+  "$7M+ AUM driven through one BD play",
 ];
 
 const clients = [
