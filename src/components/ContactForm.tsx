@@ -148,7 +148,7 @@ export default function ContactForm() {
 
   if (submitted) {
     // Calendly URL - goes directly to calendar view with prefilled name and email
-    const calendlyUrl = `https://calendly.com/jdothamilton/call?name=${encodeURIComponent(`${formData.firstName} ${formData.lastName}`.trim())}&email=${encodeURIComponent(formData.email)}&back=1`;
+    const calendlyUrl = `https://calendly.com/yanolima/connect?name=${encodeURIComponent(`${formData.firstName} ${formData.lastName}`.trim())}&email=${encodeURIComponent(formData.email)}&back=1`;
 
     return (
       <section id="contact" className="section-padding relative overflow-hidden bg-gradient-to-b from-[#0a0a0a] to-[#0a0a0a]">
