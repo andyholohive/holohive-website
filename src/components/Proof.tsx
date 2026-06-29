@@ -242,7 +242,7 @@ const testimonials: Testimonial[] = [
   {
     quote: "Top-tier relationships, always professional. Nothing but good things to say.",
     name: "Adam Fern",
-    role: "Robinhood",
+    role: "Proof of Play",
     image: "/people/Adam Fern.jpg",
     featured: false,
   },
