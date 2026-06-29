@@ -233,18 +233,11 @@ const testimonials: Testimonial[] = [
     featured: true,
   },
   {
-    quote: "You guys have been f****** top tier. It's amazing what you guys pulled off.",
-    name: "Zero",
-    role: "Co-Founder, Space",
-    image: "/logos/space_pf.jpeg",
-    featured: true,
-  },
-  {
     quote: "Holo Hive's help on MapleStory's launch was invaluable. Their insights sharpened the team's messaging and helped them move faster.",
     name: "Parker Heath",
     role: "Avalanche",
     image: "/people/Parker Heath.jpeg",
-    featured: false,
+    featured: true,
   },
   {
     quote: "Top-tier relationships, always professional. Nothing but good things to say.",

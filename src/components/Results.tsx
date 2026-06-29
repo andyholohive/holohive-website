@@ -15,12 +15,13 @@ const results = [
     attribution: "Kam Punia, CEO",
   },
   {
-    project: "Space",
-    value: "$65K",
-    label: "Raised in 6 Days",
-    context: "13X ROI. 42% conversion rate. Industry benchmark is 10-20%.",
-    quote: "It's amazing what you guys pulled off.",
-    attribution: "Zero, Co-Founder",
+    project: "Fogo",
+    value: "$5.48M+",
+    label: "Verified Korean Trading Volume",
+    context:
+      "Korea, in 3 months. Valiant Perp DEX all-time high. Korea named main market by Fogo's team. Signed renewal.",
+    quote: null,
+    attribution: null,
   },
   {
     project: "Flying Tulip",
