@@ -9,22 +9,22 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://holohive.io"),
+  metadataBase: new URL("https://www.holohive.io"),
   title: "Holo Hive | Korea Market Activation for Web3 Projects",
-  description: "Korea market activation for funded Web3 projects. $21.5M in presale deposits. $65K raised in 6 days. Seoul-based. 100+ launches.",
+  description: "Korea market activation for funded Web3 projects. 100+ launches. $21.5M in presale deposits. Seoul-based team.",
   keywords: ["Web3", "Korea", "crypto marketing", "Korea expansion", "blockchain", "Web3 growth"],
   alternates: {
-    canonical: "https://holohive.io",
+    canonical: "https://www.holohive.io",
   },
   openGraph: {
     title: "Holo Hive | Korea Market Activation for Web3 Projects",
-    description: "Korea market activation for funded Web3 projects. $21.5M in presale deposits. $65K raised in 6 days. Seoul-based. 100+ launches.",
+    description: "Korea market activation for funded Web3 projects. 100+ launches. $21.5M in presale deposits. Seoul-based team.",
     type: "website",
     siteName: "Holo Hive",
-    url: "https://holohive.io",
+    url: "https://www.holohive.io",
     images: [
       {
-        url: "https://holohive.io/og-background.jpeg",
+        url: "https://www.holohive.io/og-background.jpeg",
         width: 1200,
         height: 630,
         alt: "Holo Hive - Korea Market Activation for Web3 Projects",
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Holo Hive | Korea Market Activation for Web3 Projects",
-    description: "Korea market activation for funded Web3 projects. $21.5M in presale deposits. $65K raised in 6 days. Seoul-based. 100+ launches.",
-    images: ["https://holohive.io/og-background.jpeg"],
+    description: "Korea market activation for funded Web3 projects. 100+ launches. $21.5M in presale deposits. Seoul-based team.",
+    images: ["https://www.holohive.io/og-background.jpeg"],
   },
 };
 
@@ -113,8 +113,8 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "Holo Hive",
-              url: "https://holohive.io",
-              logo: "https://holohive.io/logo.png",
+              url: "https://www.holohive.io",
+              logo: "https://www.holohive.io/logo.png",
               description: "Korea market activation for funded Web3 projects.",
               sameAs: [
                 "https://x.com/holohive_",
@@ -130,7 +130,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Holo Hive",
-              url: "https://holohive.io",
+              url: "https://www.holohive.io",
             }),
           }}
         />

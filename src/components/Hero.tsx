@@ -50,7 +50,7 @@ const stats = [
   { value: "100+", label: "Launches", icon: "rocket" },
   { value: "$30B+", label: "Client FDV", icon: "chart" },
   { value: "7+", label: "Years in Web3", icon: "globe" },
-  { value: "Seoul", label: "Based Team", icon: "location" },
+  { value: "Seoul", label: "HQ", icon: "location" },
 ];
 
 export default function Hero() {

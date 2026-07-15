@@ -262,7 +262,7 @@ const testimonials: Testimonial[] = [
   },
   {
     quote: "Holo Hive is one of the most professional partners we have worked with. Very happy with the relationship and work done together.",
-    name: "Guilio Xiloyannis",
+    name: "Giulio Xiloyannis",
     role: "CEO & Founder, MON Protocol",
     image: "/people/Giulio Xiloyannis.jpeg",
     featured: false,
@@ -418,7 +418,7 @@ export default function Proof() {
 
 
         {/* Other Testimonials - Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           {otherTestimonials.map((testimonial, index) => (
             <div
               key={index}
