@@ -55,7 +55,7 @@ export default function Footer() {
                 </svg>
               </a>
               <a
-                href="https://telegram.org"
+                href="https://t.me/yanolima"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-10 h-10 bg-[var(--card-dark)] border border-[var(--border-dark)] rounded-lg flex items-center justify-center text-[var(--foreground-light-secondary)] hover:text-[var(--accent-teal)] hover:border-[var(--accent-teal)]/50 transition-all"
