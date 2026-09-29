@@ -8,7 +8,7 @@ import { UmiaChart } from '@/components/case-details-graphics';
 import { VeniceCoverageChart } from '@/components/homepage-evidence';
 import { VeniceCampaignStory } from '@/components/venice-campaign-story';
 import { CaseMeasurement } from '@/components/case-measurement';
-const origin = 'https://holo-hive-website-preview.yanopwl.chatgpt.site';
+const origin = 'https://www.holohive.io';
 export function generateStaticParams() {
   return Object.keys(cases).map((slug) => ({ slug }));
 }
