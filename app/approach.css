@@ -1,0 +1,437 @@
+/* One connected, conceptual mechanism. Oval geometry and editorial layering
+   adapt the supplied references without importing their alternative palettes. */
+.hh-method-intro {
+  max-width: 1000px;
+}
+.hh-method-intro h2 {
+  margin: 16px 0 0;
+  max-width: 25ch;
+}
+.hh-site .hh-method-lead {
+  margin-top: 20px;
+  max-width: 64ch;
+  color: var(--hh-muted);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+.hh-presence-system {
+  --hh-mechanism-stroke: 1.5;
+  --hh-mechanism-detail-stroke: 1;
+  --hh-mechanism-heading-size: clamp(1.25rem, 1.8vw, 1.5rem);
+  margin: 0;
+  padding: 24px 0 0;
+  border-top: 1px solid var(--hh-line);
+}
+.hh-presence-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 40px minmax(0, 1.12fr) 40px minmax(
+      0,
+      1fr
+    );
+  gap: clamp(12px, 1.5vw, 24px);
+  align-items: stretch;
+}
+.hh-presence-zone {
+  min-width: 0;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 16px;
+}
+.hh-site .hh-presence-zone h3 {
+  margin: 0;
+  min-block-size: 2.6em;
+  color: var(--hh-ink);
+  font-size: var(--hh-mechanism-heading-size);
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: -0.035em;
+}
+.hh-site .hh-presence-problem {
+  margin: 0 0 10px;
+  color: var(--hh-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.hh-presence-connector {
+  display: flex;
+  align-items: center;
+  padding-top: calc(2.6 * var(--hh-mechanism-heading-size) + 1.3125rem + 26px);
+  color: var(--hh-green);
+}
+.hh-presence-connector svg {
+  width: 100%;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: var(--hh-mechanism-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hh-audience-selection {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-block: 16px;
+}
+.hh-audience-compass {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  padding-block: 20px;
+}
+.hh-audience-orbit {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: color-mix(in srgb, var(--hh-green) 35%, var(--hh-paper));
+  stroke-width: var(--hh-mechanism-detail-stroke);
+  pointer-events: none;
+}
+.hh-presence-system svg path,
+.hh-presence-system svg ellipse {
+  vector-effect: non-scaling-stroke;
+}
+.hh-audience-goal {
+  align-self: center;
+  padding: 12px 22px;
+  border: 1.5px solid var(--hh-green);
+  border-radius: 100px;
+  background: var(--hh-paper);
+  color: var(--hh-green);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.hh-audience-branches {
+  width: 100%;
+  height: 42px;
+  fill: none;
+  stroke: var(--hh-green);
+  stroke-width: var(--hh-mechanism-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hh-audience-options {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hh-audience-options li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 5.75rem;
+  padding: 12px 3px;
+  border: 1px solid var(--hh-green);
+  border-radius: 50%;
+  background: var(--hh-white);
+  color: var(--hh-green);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+.hh-presence-note {
+  display: block;
+  margin-top: 16px;
+  color: var(--hh-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.hh-creator-rhythm {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  min-width: 0;
+  gap: 18px;
+  padding: clamp(20px, 1.8vw, 26px);
+  border-radius: var(--hh-detail-radius);
+  background: var(--hh-green);
+  color: var(--hh-white);
+}
+.hh-creator-rhythm-label {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.hh-creator-formats {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0 1.125rem 0 0;
+  list-style: none;
+}
+.hh-creator-formats li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  min-width: 0;
+  min-height: 4.75rem;
+  padding: 0.8125rem 1rem 2.25rem;
+  border: 1px solid var(--hh-line);
+  border-radius: 2px;
+  background: var(--hh-paper);
+  color: var(--hh-green);
+  box-shadow: 0 -2px 6px rgb(0 0 0 / 6%);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+.hh-creator-formats li + li {
+  /* The overlap occupies only the preceding sheet's empty bottom padding;
+     each readable label remains in natural flow, including enlarged text. */
+  margin-top: -1.5rem;
+}
+.hh-creator-formats li:nth-child(2) {
+  inset-inline-start: 0.375rem;
+}
+.hh-creator-formats li:nth-child(3) {
+  inset-inline-start: 0.75rem;
+}
+.hh-creator-formats li:nth-child(4) {
+  inset-inline-start: 1.125rem;
+}
+.hh-creator-formats li:last-child {
+  min-height: 3.75rem;
+  padding-bottom: 1rem;
+}
+.hh-creator-cadence {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.hh-creator-cadence svg,
+.hh-presence-feedback p svg {
+  flex: 0 0 18px;
+}
+.hh-wider-discussion {
+  align-self: center;
+  min-width: 0;
+}
+.hh-participation-map {
+  display: grid;
+  grid-template-columns: 5rem minmax(24px, 0.5fr) minmax(0, 1fr);
+  grid-template-rows: auto minmax(15rem, auto);
+}
+.hh-participation-qualifier {
+  overflow-wrap: anywhere;
+  grid-column: 3;
+  grid-row: 1;
+  margin-bottom: 12px;
+  color: var(--hh-muted);
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+.hh-participation-source {
+  grid-column: 1;
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
+  min-width: 0;
+  align-items: start;
+  justify-items: center;
+}
+.hh-discussion-origin {
+  grid-row: 2;
+  width: 5rem;
+  height: 5rem;
+  fill: none;
+  stroke: var(--hh-green);
+  stroke-width: var(--hh-mechanism-stroke);
+}
+.hh-participation-source > span {
+  grid-row: 3;
+  margin-top: 8px;
+  color: var(--hh-green);
+  font-size: 0.875rem;
+  line-height: 1.4;
+  text-align: center;
+}
+.hh-participation-paths {
+  grid-column: 2;
+  grid-row: 2;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 15rem;
+}
+.hh-discussion-connections {
+  stroke: var(--hh-green);
+  stroke-width: var(--hh-mechanism-stroke);
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hh-discussion-potential {
+  stroke-dasharray: 2 5;
+}
+.hh-participation-outcomes {
+  grid-column: 3;
+  grid-row: 2;
+  display: grid;
+  grid-template-rows: repeat(3, minmax(0, 1fr));
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.hh-participation-outcomes li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  padding-block: 14px;
+  color: var(--hh-green);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.hh-participation-outcomes li::before {
+  content: '';
+  flex: 0 0 8px;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid var(--hh-green);
+  border-radius: 50%;
+  background: var(--hh-paper);
+}
+.hh-participation-outcomes span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.hh-presence-feedback {
+  margin-top: 16px;
+  text-align: center;
+}
+.hh-presence-feedback > svg {
+  display: block;
+  width: 100%;
+  height: 42px;
+  fill: none;
+  stroke: var(--hh-green);
+  stroke-width: var(--hh-mechanism-detail-stroke);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.hh-site .hh-presence-feedback p {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: -12px 24px 0;
+  padding: 0 16px;
+  background: var(--hh-paper);
+  color: var(--hh-green);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.hh-presence-system > figcaption {
+  margin-top: 12px;
+  color: var(--hh-muted);
+  font-size: 0.875rem;
+  line-height: 1.5;
+  text-align: center;
+}
+.hh-site .hh-method-ownership {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 12px;
+  margin: 16px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--hh-line);
+  color: var(--hh-muted);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+}
+.hh-method-ownership strong {
+  color: var(--hh-green);
+  font-weight: 600;
+}
+.case-coverage-sources {
+  margin: 16px 0 0;
+  padding-left: 1.25rem;
+  list-style: decimal;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.case-coverage-sources li + li {
+  margin-top: 16px;
+}
+.case-coverage-sources a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (max-width: 1100px) {
+  .hh-presence-system {
+    padding-top: 24px;
+  }
+  .hh-presence-flow {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .hh-presence-zone {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+    grid-template-rows: auto;
+    align-items: center;
+    gap: 24px;
+  }
+  .hh-site .hh-presence-zone h3 {
+    min-block-size: 0;
+  }
+  .hh-presence-zone > :last-child {
+    width: 100%;
+    max-width: 360px;
+    justify-self: end;
+  }
+  .hh-presence-connector {
+    justify-content: center;
+    height: 24px;
+    padding: 0;
+  }
+  .hh-presence-connector svg {
+    width: 24px;
+    transform: rotate(90deg);
+  }
+  .hh-presence-feedback {
+    padding-top: 18px;
+    border-top: 1px solid var(--hh-line);
+  }
+  .hh-presence-feedback > svg {
+    display: none;
+  }
+  .hh-site .hh-presence-feedback p {
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 740px) {
+  .hh-presence-zone {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+  }
+  .hh-presence-zone > :last-child {
+    justify-self: center;
+  }
+}
+@media (max-width: 600px) {
+  .hh-audience-options {
+    gap: 6px;
+  }
+  .hh-site .hh-method-lead {
+    font-size: 1rem;
+  }
+  .hh-site .hh-presence-feedback p {
+    font-size: 0.9375rem;
+    text-align: left;
+  }
+}
