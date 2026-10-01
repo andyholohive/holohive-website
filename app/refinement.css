@@ -610,9 +610,6 @@
 .hh-scan-entry > .hh-scan-preview-link {
   margin-top: 12px;
 }
-.hh-scan-example-mobile {
-  display: none;
-}
 .hh-scan-sample {
   margin: 0;
   padding: 28px;
@@ -745,40 +742,6 @@
     max-width: 640px;
     width: 100%;
     margin-inline: auto;
-  }
-  .hh-scan-example-desktop {
-    display: none;
-  }
-  .hh-scan-example-mobile {
-    display: block;
-    margin-top: 18px;
-  }
-  .hh-scan-example-mobile .hh-scan-sample {
-    display: grid;
-    grid-template-columns: auto minmax(0, 1fr);
-    align-items: center;
-    gap: 12px 18px;
-    padding: 20px;
-  }
-  .hh-scan-example-mobile figcaption {
-    grid-column: 1 / -1;
-    padding-bottom: 12px;
-  }
-  .hh-scan-example-mobile .hh-sample-category {
-    grid-column: 1 / -1;
-    margin: 0;
-  }
-  .hh-scan-example-mobile .hh-sample-finding,
-  .hh-scan-example-mobile .hh-sample-bar {
-    display: none;
-  }
-  .hh-scan-example-mobile .hh-sample-number {
-    margin: 0;
-    font-size: 2.5rem;
-  }
-  .hh-scan-example-mobile .hh-sample-source {
-    grid-column: 1 / -1;
-    margin: 0;
   }
 }
 @media (max-width: 760px) {
@@ -1143,13 +1106,6 @@
   .hh-folio-spine img {
     display: none;
   }
-  .hh-folio-page .hh-scan-tabs[data-slot='tabs-list'] {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-  .hh-folio-page .hh-scan-tabs [data-slot='tabs-trigger'] {
-    min-height: 48px;
-    font-size: 0.875rem;
-  }
   .hh-scan-explorer .hh-folio-page .hh-scan-panel {
     padding: 12px 18px 16px;
   }
@@ -1172,5 +1128,34 @@
   .hh-footer-links {
     flex-wrap: wrap;
     gap: 4px 22px;
+  }
+}
+
+/* Phones: one swipeable row of tabs instead of a wrapped grid. */
+@media (max-width: 640px) {
+  .hh-folio-page .hh-scan-tabs[data-slot='tabs-list'] {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x proximity;
+    scroll-padding-inline: 12px;
+    scrollbar-width: none;
+    mask-image: linear-gradient(to right, #000 calc(100% - 32px), transparent);
+  }
+  .hh-folio-page .hh-scan-tabs[data-slot='tabs-list']::-webkit-scrollbar {
+    display: none;
+  }
+  .hh-folio-page .hh-scan-tabs [data-slot='tabs-trigger'] {
+    flex: 0 0 auto;
+    min-height: 48px;
+    padding: 12px 18px;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    scroll-snap-align: start;
+  }
+  .hh-folio-page .hh-scan-tabs [data-slot='tabs-trigger']:last-child {
+    margin-inline-end: 32px;
   }
 }

@@ -1,7 +1,7 @@
 'use client';
 /* oxlint-disable nextjs/no-img-element -- Existing supplied client marks. */
 import { ApproachDistinctions } from '@/components/process-evidence';
-import { useRef, useState, type CSSProperties } from 'react';
+import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { ArrowUpRight, ArrowLeft, ArrowRight, Plus, X } from 'lucide-react';
 import {
   Popover,
@@ -396,6 +396,21 @@ export function ScanExplorer() {
   const chapters = ['coverage', 'understanding', 'competition', 'opportunity'];
   const [chapter, setChapter] = useState('coverage');
   const chapterIndex = chapters.indexOf(chapter);
+  const pageRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    // On phones the tab row scrolls sideways; keep the active tab in view.
+    const list = pageRef.current?.querySelector<HTMLElement>(
+      '[data-slot="tabs-list"]',
+    );
+    const tab = list?.querySelector<HTMLElement>('[data-active]');
+    if (!list || !tab || list.scrollWidth <= list.clientWidth) return;
+    const offset =
+      tab.getBoundingClientRect().left - list.getBoundingClientRect().left;
+    list.scrollTo({
+      left: list.scrollLeft + offset - (list.clientWidth - tab.offsetWidth) / 2,
+      behavior: 'smooth',
+    });
+  }, [chapter]);
   return (
     <Tabs
       value={chapter}
@@ -406,7 +421,7 @@ export function ScanExplorer() {
         <span className="hh-folio-spine" aria-hidden="true">
           <img src="/assets/mark.png" width="24" height="24" alt="" />
         </span>
-        <div className="hh-folio-page">
+        <div className="hh-folio-page" ref={pageRef}>
           <TabsList
             className="hh-scan-tabs"
             aria-label="What a Korea scan can show"

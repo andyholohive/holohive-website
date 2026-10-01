@@ -7,7 +7,6 @@ import { createInquiryNavigation } from '@/lib/inquiry-navigation';
 import { countFunnelEvent } from '@/lib/funnel-client';
 import { QualificationDialog } from '@/components/qualification-dialog';
 import { HomepageScanStart } from '@/components/homepage-scan-start';
-import { ScanSamplePreview } from '@/components/scan-sample-preview';
 import type { InquiryIntent } from '@/lib/qualification';
 import { CasePosters } from '@/components/case-posters';
 import { LoreTestimonial } from '@/components/lore-testimonial';
@@ -415,9 +414,6 @@ export default function Home() {
                     openScan();
                   }}
                 />
-                <div className="hh-scan-example-mobile">
-                  <ScanSamplePreview />
-                </div>
                 <Link
                   className="hh-scan-preview-link"
                   href="/korea-scan-example"
