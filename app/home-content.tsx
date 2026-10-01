@@ -490,6 +490,9 @@ export default function Home() {
             >
               Talk to us
             </a>
+            <a href="https://t.me/yanolima" target="_blank" rel="noreferrer">
+              Telegram ↗
+            </a>
             <a href="https://x.com/holohive_" target="_blank" rel="noreferrer">
               X ↗
             </a>

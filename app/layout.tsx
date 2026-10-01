@@ -22,12 +22,11 @@ export const metadata: Metadata = {
     type: 'website',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: 'Holo Hive | Your team in Korea',
     description: 'See the work, client evidence and Korea Market Scan.',
   },
   robots: { index: true, follow: true },
-  icons: { icon: '/assets/mark.png' },
 };
 export default function RootLayout({
   children,

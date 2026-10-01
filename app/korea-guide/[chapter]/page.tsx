@@ -37,8 +37,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: chapter.description,
       url,
       type: 'article',
+      images: '/opengraph-image.jpeg',
     },
-    twitter: { card: 'summary', title, description: chapter.description },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description: chapter.description,
+      images: '/opengraph-image.jpeg',
+    },
   };
 }
 export default async function GuideChapter({ params }: Props) {

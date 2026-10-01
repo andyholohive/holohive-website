@@ -18,9 +18,11 @@ export const metadata: Metadata = {
     description,
     url: '/korea-guide',
     type: 'website',
+    images: '/opengraph-image.jpeg',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: '/opengraph-image.jpeg',
     title: 'The Korea Field Guide | Holo Hive',
     description,
   },

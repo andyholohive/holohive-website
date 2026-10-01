@@ -12,9 +12,11 @@ export const metadata: Metadata = {
     title: 'Inside a Korea Market Scan | Holo Hive',
     description: 'Real research. Defined scope. A practical interpretation.',
     url: '/korea-scan-example',
+    images: '/opengraph-image.jpeg',
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
+    images: '/opengraph-image.jpeg',
     title: 'Inside a Korea Market Scan | Holo Hive',
     description:
       'Category interest, project visibility and the questions worth investigating.',

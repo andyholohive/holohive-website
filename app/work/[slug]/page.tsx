@@ -29,9 +29,11 @@ export async function generateMetadata({
       description: c.title,
       url: `${origin}/work/${slug}`,
       type: 'article',
+      images: '/opengraph-image.jpeg',
     },
     twitter: {
-      card: 'summary',
+      card: 'summary_large_image',
+      images: '/opengraph-image.jpeg',
       title: `${c.name} | Holo Hive`,
       description: c.title,
     },
