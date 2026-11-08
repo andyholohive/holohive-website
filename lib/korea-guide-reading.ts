@@ -39,7 +39,7 @@ export const guideReading: Record<
   participation: {
     takeaway:
       'Presence is the foundation, not the finish line. The value depends on what it helps the right people understand and do.',
-    minutes: 2,
+    minutes: 3,
     nextStep: 'Which outcome would make Korea worth it?',
     nextStepDetail:
       'We’ll use your goal and the market evidence to discuss what meaningful progress could look like.',
@@ -48,8 +48,8 @@ export const guideReading: Record<
     takeaway:
       'Creator access is one part of the job. A partner should also own the research, local explanation, coordination and reporting.',
     minutes: 3,
-    nextStep: 'Leave the first call with a clearer Korea decision.',
+    nextStep: 'See where your project stands in Korea.',
     nextStepDetail:
-      'We’ll walk through your scan, discuss your goals and assess fit. If there is a fit, we’ll outline the next step.',
+      'For qualified teams, we prepare your free scan before the first call, walk you through the findings and discuss your goals.',
   },
 };

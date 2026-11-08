@@ -461,6 +461,15 @@
   color: #fff;
   border-radius: 4px;
 }
+.hh-guide-next-step .hh-guide-direct-call {
+  margin: 18px 0 0;
+  font-size: 1rem;
+}
+.hh-guide-direct-call a {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
 .hh-guide-next-step h2 {
   font-size: 1.625rem;
   line-height: 1.25;

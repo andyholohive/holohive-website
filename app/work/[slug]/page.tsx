@@ -192,11 +192,6 @@ export default async function CasePage({
                   <span>{row.label}</span>
                   <strong>{row.value}</strong>
                 </div>
-                {slug === 'umia' && (
-                  <div className="bar-track">
-                    <span style={{ width: `${row.width}%` }} />
-                  </div>
-                )}
               </div>
             ))}
             <p>{c.chartNote}</p>

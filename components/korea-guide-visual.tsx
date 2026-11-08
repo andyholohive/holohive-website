@@ -1,11 +1,5 @@
 import { ArrowRight } from 'lucide-react';
 
-const coverage = [
-  { name: 'Placed mentions', value: 62 },
-  { name: 'Reposts', value: 65 },
-  { name: 'Independent pieces / shares', value: 54 },
-];
-
 export function GuideVisual({
   id,
   compact = false,
@@ -93,28 +87,15 @@ export function GuideVisual({
         </div>
       )}
       {id === 'measurement' && (
-        <div className="hh-guide-coverage">
-          <div className="hh-guide-coverage-total">
-            <strong>181</strong>
-            <span>UMIA mentions</span>
-          </div>
-          <div className="hh-guide-coverage-bar" aria-hidden="true">
-            {coverage.map((item, i) => (
-              <span
-                key={item.name}
-                className={`tone-${i}`}
-                style={{ flex: item.value }}
-              />
-            ))}
-          </div>
-          <dl>
-            {coverage.map((item) => (
-              <div key={item.name}>
-                <dt>{item.name}</dt>
-                <dd>{item.value}</dd>
+        <div className="hh-guide-evidence">
+          {['Delivered work', 'Market response', 'Product action', 'Next decision'].map(
+            (word, i) => (
+              <div key={word}>
+                <span>0{i + 1}</span>
+                <strong>{word}</strong>
               </div>
-            ))}
-          </dl>
+            ),
+          )}
         </div>
       )}
       {id === 'choosing-a-partner' && (
@@ -145,7 +126,7 @@ const visualNotes: Record<string, string> = {
     'An illustrative message sequence. Each piece adds context.',
   participation: 'Choose a goal before choosing the campaign.',
   measurement:
-    'UMIA report · July 20–August 31, 2026. Reposts and independent pieces / shares are separate categories.',
+    'Separate the work delivered from the response and product actions it may have influenced.',
   'choosing-a-partner':
     'Different models solve different gaps. None removes the need for client decisions.',
 };

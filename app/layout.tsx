@@ -11,12 +11,12 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://www.holohive.io'),
   title: 'Holo Hive | Your team in Korea',
   description:
-    'Build demand for your project in Korea. Strategy, creator relationships and campaigns that help Web3 teams attract users, investors and ecosystem partners.',
+    'Holo Hive helps Web3 teams build demand in Korea through local research, direct product relationships and creator-led campaigns. Reporting in English.',
   alternates: { canonical: '/' },
   openGraph: {
     title: 'Holo Hive | Your team in Korea',
     description:
-      'Build demand for your project in Korea through local strategy, creator relationships and campaigns.',
+      'Build demand in Korea through local research, direct product relationships and creator-led campaigns. One Seoul-based team, reporting in English.',
     url: '/',
     siteName: 'Holo Hive',
     type: 'website',

@@ -173,7 +173,7 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
         </p>
         <p>
           That is why we look at presence and sentiment before proposing a
-          creator program. Existing relationships can remain valuable; the scan
+          plan. Existing relationships can remain valuable; the scan
           shows what they cover and what may still be missing.
         </p>
         <Note title="The question to bring to a partner">
@@ -240,9 +240,9 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
         <h2>Put the local work around the placement.</h2>
         <p>
           Research tells us where the gap is. Different creators explain the
-          project for their own audiences. Campaigns give those audiences a
-          reason to take part. We track what was delivered, whether the
-          conversation spread and what useful participation followed.
+          project for their own audiences. Direct conversations can reveal
+          product questions and onboarding barriers. We track the work, the
+          market response and useful participation separately.
         </p>
         <Note title="When a placement is enough">
           <p>
@@ -281,9 +281,9 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
             href="/work/umia"
           >
             <p>
-              <strong>Investor interest.</strong> Beyond wider coverage,
-              creators relayed <strong>$1M+ in allocation requests</strong>{' '}
-              before the sale. These were requests, not completed investments.
+              <strong>Investor interest.</strong> Multiple people requested
+              allocations of <strong>$1M+ each</strong> before the sale,
+              according to Holo Hive’s founder. Requests, not completed investments.
             </p>
           </Outcome>
           <Outcome
@@ -313,20 +313,6 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
               was company-reported; it is not project revenue.
             </p>
           </Outcome>
-          <Outcome
-            name="Flying Tulip · 2026"
-            metric="~$10M"
-            label="From Korea in the public round"
-            context="15% of the $67M public round; approximately $10.05M."
-            href="/#flying-tulip"
-            linkLabel="View the result"
-          >
-            <p>
-              <strong>Sale participation.</strong> Korea accounted for a
-              meaningful share of a public round we supported. The regional
-              total does not establish that Holo Hive caused every contribution.
-            </p>
-          </Outcome>
         </div>
         <h2>The goal shapes the program.</h2>
         <p>
@@ -334,6 +320,22 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
           participation. For a product, it may be use. For an ecosystem, it may
           be attention and activity across its teams. None requires reducing the
           entire relationship to a cost-per-signup campaign.
+        </p>
+        <h2>Direct relationships, wider demand—or both.</h2>
+        <p>
+          Some teams need relevant people to try the product, ask questions and
+          provide feedback. Others need a clearer story reaching more of their
+          category. We can support direct onboarding and follow-up, creator-led
+          communication, or a combination. These are options, not mandatory
+          stages or a requirement to build a campaign website.
+        </p>
+        <h2>Incentives can start activity. Repeat use is a separate question.</h2>
+        <p>
+          Rewards can make a trial worthwhile. The next question is whether
+          people find value beyond the reward—and what prevents them from
+          returning. Useful feedback and repeat-use data can inform the next
+          plan. A reward claim or first transaction alone does not establish
+          lasting adoption.
         </p>
         <p>
           Presence and sentiment are useful signals, but neither guarantees
@@ -377,12 +379,13 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
           </p>
         </section>
       </div>
-      <h2>What Holo Hive takes on.</h2>
+      <h2 id="scope">What Holo Hive takes on.</h2>
       <p>
-        We research your position, shape the local explanation, work with the
-        right creators, run campaigns and report what changes. You provide
-        accurate project information, approvals, access and available product
-        data. We keep the work visible in English.
+        We research your position, shape the local explanation and coordinate
+        direct product relationships, creator-led campaigns or both. That can
+        include onboarding, questions and follow-up—not just arranging posts.
+        You provide product knowledge, approvals, access and available
+        performance data. Reporting is in English.
       </p>
       <p>
         Our research covers 300+ Korean channels. Monitoring is not ownership:
@@ -394,15 +397,16 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
         <div>
           <dt>The work</dt>
           <dd>
-            What was agreed and delivered, with dated posts and an English
-            explanation.
+            What was agreed and delivered: published material, onboarding and
+            other activity within the scope, explained in English.
           </dd>
         </div>
         <div>
           <dt>The response</dt>
           <dd>
-            What changed in coverage, understanding and sentiment. Paid work and
-            wider pickup shown separately.
+            What audiences discussed, asked and responded to. Distinguish paid
+            or coordinated work from reposts and other coverage where verified;
+            mark unknown relationships as unknown.
           </dd>
         </div>
         <div>
@@ -410,6 +414,13 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
           <dd>
             The product or campaign actions that can be measured—and the limits
             of attributing them to the work.
+          </dd>
+        </div>
+        <div>
+          <dt>The next decision</dt>
+          <dd>
+            What to keep, change or investigate next—and which evidence supports
+            that recommendation.
           </dd>
         </div>
       </dl>
@@ -425,27 +436,26 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
         Targets for market response are different from commitments to deliver
         specific work.
       </p>
-      <div className="hh-guide-milestones">
-        <div>
-          <strong>7 days</strong>
-          <span>First Korean creators live</span>
-        </div>
-        <div>
-          <strong>Week 6</strong>
-          <span>Progress review against the baseline</span>
-        </div>
-      </div>
-      <p className="hh-guide-conditions">
-        Seven days from agreed kickoff, after access and approvals are settled.
-        Initial plans usually run 90 days; the tailored agreement defines scope,
-        commitments and dependencies.
+      <p>
+        Education and participation can run together. Agree the kickoff,
+        review points and duration around product readiness and milestones,
+        rather than assume every project needs the same sequence.
+      </p>
+      <h2>Ask what you can review—and what stays with your team.</h2>
+      <p>
+        Ask why the proposed creators and participants fit your goal, and agree
+        how your team reviews recommendations. Define handoff, materials,
+        relationship access and ongoing support in the scope. A managed program
+        does not automatically transfer a partner’s contacts or guarantee that
+        participants stay active after it ends.
       </p>
       <Note title="The first call is about your situation.">
         <p>
-          We review your scan, your goal and whether Korea deserves more
-          attention. If there is a fit, we discuss what a plan would need to
-          cover. The exact roster, budget allocation and measurement setup
-          belong in the tailored proposal.
+          Request a Korea scan and, if you qualify, we prepare it before your
+          first call and walk you through the findings. Already know what you
+          need? <Link href="/#contact">Request a call</Link> to discuss your goals
+          and fit without requesting a scan. Both routes include a few questions
+          to check fit before booking.
         </p>
       </Note>
       <p>

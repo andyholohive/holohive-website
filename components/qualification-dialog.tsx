@@ -594,8 +594,8 @@ export function QualificationDialog({
                   </DialogDescription>
                   {step === 'fit' && (
                     <p className="hh-fit-paid-copy">
-                      Ongoing engagements: <span>US$15K–$25K/month</span>,
-                      depending on scope. Usually starting with 90 days.
+                      Engagements start at <span>US$15,000/month</span>.
+                      Scope and included costs are agreed in your proposal.
                     </p>
                   )}
                 </div>

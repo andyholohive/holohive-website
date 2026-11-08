@@ -1,6 +1,6 @@
 'use client';
 /* oxlint-disable nextjs/no-img-element -- Existing supplied client marks. */
-import { ApproachDistinctions } from '@/components/process-evidence';
+import { ApproachDistinctions, EngagementRoutes } from '@/components/process-evidence';
 import { useEffect, useRef, useState, type CSSProperties } from 'react';
 import { ArrowUpRight, ArrowLeft, ArrowRight, Plus, X } from 'lucide-react';
 import {
@@ -650,11 +650,12 @@ export function KoreaProcess() {
           <p className="hh-kicker">Our approach</p>
           <h2 id="method-heading">Attention alone doesn’t build demand.</h2>
           <p className="hh-method-lead">
-            Reach people who matter, give them a reason to care, and connect
-            that interest to your goals.
+            We assess your Korean footprint, then choose the audiences and
+            work that fit your goal.
           </p>
         </header>
         <ApproachDistinctions />
+        <EngagementRoutes />
         <p className="hh-method-ownership">
           <strong>One team in Seoul.</strong>
           <span>Local strategy, execution and English reporting.</span>
@@ -667,26 +668,8 @@ export function KoreaProcess() {
 export function CreatorTestimonials() {
   return (
     <div className="hh-creator-testimonials">
-      <h3 className="hh-quote-group-label">Recommended by Korean creators.</h3>
+      <h3 className="hh-quote-group-label">From a Korean creator.</h3>
       <div className="hh-local-quotes">
-        <figure>
-          <blockquote>
-            “The best agency I&apos;ve worked with in Korea.”
-          </blockquote>
-          <figcaption>
-            <img
-              src="/assets/ewl.jpg"
-              alt=""
-              width="64"
-              height="64"
-              loading="lazy"
-            />
-            <div>
-              <strong>EWL</strong>
-              <span>Korean creator · @ewlreads</span>
-            </div>
-          </figcaption>
-        </figure>
         <figure>
           <blockquote>
             “I&apos;ve warned them [teams] about most agencies in Korea. Holo

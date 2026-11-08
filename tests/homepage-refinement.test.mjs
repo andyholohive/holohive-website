@@ -218,7 +218,8 @@ test('centered service-first hero separates the call and optional scan paths', (
   assert.match(hero, /onClick=\{openConversation\}/);
   assert.equal((hero.match(/<button\b/g) ?? []).length, 2);
   assert.match(hero, /Attract the right users, investors and partners/);
-  assert.match(hero, /positioning, creator\s+relationships and\s+campaigns/);
+  // [2026-11-04 handoff] service positioning: research, direct relationships, creator-led campaigns.
+  assert.match(hero, /local research, direct product\s+relationships and\s+creator-led campaigns/);
   assert.match(hero, /Free scan \+ live walkthrough\. For qualified teams/);
   assert.match(hero, /For qualified\s+teams/);
   assert.doesNotMatch(hero, /hh-credentials|hh-client-credentials/);
@@ -365,8 +366,11 @@ test('shorter FAQ retains decision-critical scope, timing and eligibility', () =
     .join(' ');
   assert.match(copy, /do not arrange or guarantee exchange listings/);
   assert.match(copy, /data your team shares/);
-  assert.match(copy, /within seven days of the agreed kickoff/);
-  assert.match(copy, /At week six/);
+  // [2026-11-04 handoff] no universal seven-day kickoff, week-six review or 90-day
+  // duration; the starting price and proposal-defined scope replace them.
+  assert.doesNotMatch(copy, /seven days|week six|90-day|90 days/i);
+  assert.match(copy, /Engagements start at US\$15,000\/month/);
+  assert.match(copy, /agreed in your proposal/);
   assert.match(copy, /Free for qualified teams/);
   assert.match(copy, /without duplicating effort/);
   const home = read('app/home-content.tsx');
@@ -523,7 +527,10 @@ test('approach keeps principal copy concise beside a single connected visual', (
   const { KoreaProcess } = loadTs('components/homepage-evidence.tsx');
   const html = renderToStaticMarkup(React.createElement(KoreaProcess));
   assert.match(html, /Attention alone doesn’t build demand/);
-  assert.match(html, /Reach people who matter, give them a reason to care/);
+  // [2026-11-04 handoff] two routes that can run together, no mandatory sequence.
+  assert.match(html, /Two ways to build demand\. Either, or both\./);
+  assert.match(html, /Direct product relationships/);
+  assert.match(html, /Creator-led market demand/);
   assert.match(html, /id="approach"/);
   assert.match(html, /aria-labelledby="method-heading"/);
   assert.match(html, /id="method-heading"/);
@@ -604,11 +611,14 @@ test('case previews prioritize outcomes without dropping periods or geographic s
   const html = renderToStaticMarkup(React.createElement(CasePosters));
   assert.equal((html.match(/<article\b/g) ?? []).length, 3);
   assert.equal((html.match(/hh-poster-secondary/g) ?? []).length, 2);
-  assert.match(html, /Korean creator allocation requests/);
-  assert.match(html, /Before the sale/);
+  // [2026-11-04 handoff] allocation requests are founder-reported interest, not money raised.
+  assert.match(html, /Requested per person, before the sale/);
+  assert.match(html, /Founder-reported interest/);
+  assert.doesNotMatch(html, /raised|allocation requests/i);
+  assert.match(html, /before the sale/i);
   assert.match(html, /\$5\.48M/);
   assert.match(html, /Tracked trading volume/);
-  assert.match(html, /in 2 weeks/);
+  assert.match(html, /in the first 2 conversion weeks/);
   assert.match(html, /Valiant · Fogo ecosystem/);
   assert.match(html, /Client estimate · two weeks to July 23/);
   assert.match(html, /Summer 2026/);
@@ -682,3 +692,36 @@ test('buyer-question scan invitation keeps the report offer and qualified CTA', 
   );
   assert.doesNotMatch(scan, /mailto:|Yes, show me/);
 });
+
+test('nine closed FAQ answers are present in server HTML while the accordion stays collapsed', () => {
+  // [2026-11-04 handoff] AEO prerequisite: answers must be crawlable without a
+  // click. Renders the FAQ exactly as home-content does (the shared accordion
+  // with its keepMounted default) and checks the closed panels carry the copy.
+  const { homepageQuestions } = loadTs('lib/homepage-faq.ts');
+  const { Accordion, AccordionItem, AccordionTrigger, AccordionContent } = loadTs('components/ui/accordion.tsx');
+  const h = React.createElement;
+  const tree = h(Accordion, null, homepageQuestions.map(({ question, answer, detail }, i) =>
+    h(AccordionItem, { key: question, value: String(i) },
+      h(AccordionTrigger, null, question),
+      h(AccordionContent, null, h('p', { className: 'hh-faq-answer' }, answer), h('p', { className: 'hh-faq-detail' }, detail)))));
+  const html = renderToStaticMarkup(tree);
+  for (const { answer, detail } of homepageQuestions) {
+    assert.ok(html.includes(escapeHtmlForTest(answer)), `answer in HTML: ${answer.slice(0, 40)}`);
+    assert.ok(html.includes(escapeHtmlForTest(detail)), `detail in HTML: ${detail.slice(0, 40)}`);
+  }
+  const panels = [...html.matchAll(/<div[^>]*data-slot="accordion-content"[^>]*>/g)];
+  assert.equal(panels.length, 9);
+  for (const [tag] of panels) assert.match(tag, /\bhidden(=""|\b)/);
+  const home = read('app/home-content.tsx');
+  assert.match(home, /from '@\/components\/ui\/accordion'/);
+  assert.doesNotMatch(home, /keepMounted=\{false\}/);
+});
+
+function escapeHtmlForTest(text) {
+  return text
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#x27;');
+}

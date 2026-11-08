@@ -55,11 +55,18 @@ function AccordionTrigger({
 function AccordionContent({
   className,
   children,
+  // [2026-11-08 AEO handoff] Closed panels stay in the DOM (hidden) so FAQ
+  // answers are present in the initial server HTML for crawlers and AI
+  // answer engines while the accordion still renders collapsed. Base UI
+  // keeps keyboard expand/collapse unchanged; callers may pass
+  // keepMounted={false} to opt out.
+  keepMounted = true,
   ...props
 }: AccordionPrimitive.Panel.Props) {
   return (
     <AccordionPrimitive.Panel
       data-slot="accordion-content"
+      keepMounted={keepMounted}
       className="data-open:animate-accordion-down data-closed:animate-accordion-up text-sm overflow-hidden"
       {...props}
     >

@@ -32,12 +32,12 @@ export function VeniceCompletion() {
       </div>
       <figcaption>
         <span className="hh-graphic-label">Feature-use activation</span>
-        <h4>Completed all five product tasks.</h4>
+        <h4>Submitted five screenshots.</h4>
         <p>
-          <strong>1,287</strong> verified participants
+          Of <strong>1,287</strong> entry records
         </p>
         <span className="hh-note">
-          Separate two-week feature-use activation.
+          Gross submissions in a separate feature-use activation, not verified unique people or distinct features used.
         </span>
       </figcaption>
     </figure>
@@ -60,7 +60,7 @@ export function FogoActivation() {
         </div>
       </div>
       <p>
-        <strong>320</strong> verified wallets
+        <strong>$5.48M</strong> in tracked trading volume · Holo Hive campaign reporting
       </p>
     </figure>
   );

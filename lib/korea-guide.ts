@@ -84,10 +84,6 @@ export const guideSourceLinks: Record<
     { label: 'UMIA · Ranking and allocation requests', href: '/work/umia' },
     { label: 'Venice · Mindshare and product activity', href: '/work/venice' },
     { label: 'Fogo · First two conversion weeks', href: '/work/fogo' },
-    {
-      label: 'Flying Tulip · Korea’s share of the public round',
-      href: '/#flying-tulip',
-    },
   ],
   'choosing-a-partner': [
     { label: 'Holo Hive · How we work', href: '/#approach' },

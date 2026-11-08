@@ -186,8 +186,8 @@ export default function Home() {
               <div className="hh-hero-invitation">
                 <p className="hh-hero-copy">
                   Attract the right users, investors and partners. Your
-                  Seoul-based team for positioning, creator relationships and
-                  campaigns.
+                  Seoul-based team for local research, direct product
+                  relationships and creator-led campaigns.
                 </p>
                 <div className="hh-hero-actions">
                   <button className="hh-btn" onClick={openConversation}>
@@ -438,7 +438,7 @@ export default function Home() {
               {homepageQuestions.map(({ question, answer, detail }, i) => (
                 <AccordionItem key={question} value={String(i)}>
                   <AccordionTrigger>{question}</AccordionTrigger>
-                  <AccordionContent>
+                  <AccordionContent keepMounted>
                     <p className="hh-faq-answer">{answer}</p>
                     <p className="hh-faq-detail">{detail}</p>
                   </AccordionContent>

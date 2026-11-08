@@ -86,6 +86,9 @@ export default async function GuideChapter({ params }: Props) {
             <Link className="hh-btn" href="/#request-scan">
               Get your Korea scan <ArrowUpRight size={18} />
             </Link>
+            <p className="hh-guide-direct-call">
+              Prefer to discuss your goals? <Link href="/#contact">Book a call</Link>.
+            </p>
           </aside>
           <aside
             className="hh-guide-source-note"

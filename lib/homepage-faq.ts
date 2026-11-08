@@ -10,7 +10,7 @@ export const homepageQuestions = [
     answer:
       'No. We support products, tokens and ecosystems before and after launch.',
     detail:
-      'Work can focus on presence, product use, trading or a specific campaign. We do not arrange or guarantee exchange listings.',
+      'Work can focus on product trials and feedback, repeat use, trading or launch participation. Direct relationships and creator-led campaigns can run together. We do not arrange or guarantee exchange listings.',
   },
   {
     question: 'Can you work alongside our existing agency?',
@@ -21,7 +21,7 @@ export const homepageQuestions = [
   {
     question: 'What do you handle, and what do we handle?',
     answer:
-      'We lead Korean-market research, creator relationships, campaigns and reporting.',
+      'We lead local research, positioning, product and creator relationships, campaigns and reporting.',
     detail:
       'You provide product context, priorities, approvals and access to relevant performance data. We agree responsibilities before work begins; reporting is in English.',
   },
@@ -34,23 +34,22 @@ export const homepageQuestions = [
   {
     question: 'How do you measure progress?',
     answer:
-      'We agree the goals, starting point and available data before kickoff.',
+      'We agree the goal, starting point and available data before kickoff.',
     detail:
-      'English reports cover relevant coverage, audience response and measurable actions. Attribution depends on data your team shares. We distinguish observed outcomes from attributable results; token prices and investment outcomes are not guaranteed.',
+      'English reports separate delivered work, audience response and product actions, then recommend what to change. Attribution depends on data your team shares. Coverage is not customer acquisition; token prices and investment outcomes are not guaranteed.',
   },
   {
     question: 'How soon can the work go live?',
     answer:
-      'We target the first creator activity within seven days of the agreed kickoff.',
+      'We agree the first activities around your product readiness and milestones.',
     detail:
-      'Timing depends on access and approvals. Your agreement sets the delivery commitments.',
+      'Education and participation can run together. Timing depends on scope, access and approvals; your agreement sets the kickoff, checkpoints and delivery commitments.',
   },
   {
-    question: 'Why a 90-day engagement?',
-    answer:
-      'Time to build presence, run campaigns and learn from the response.',
+    question: 'How much does an engagement cost?',
+    answer: 'Engagements start at US$15,000/month.',
     detail:
-      'At week six, we review progress against your starting point and refine the plan. Commitments and any remedies are defined in your agreement.',
+      'Scope, included costs, duration and review points are agreed in your proposal. The Korea scan and walkthrough are free for qualified teams.',
   },
   {
     question: 'What is included in the Korea scan?',

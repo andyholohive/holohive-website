@@ -2,6 +2,30 @@
 import { useId } from 'react';
 import { Repeat2 } from 'lucide-react';
 
+export function EngagementRoutes() {
+  return (
+    <div className="hh-method-routes">
+      <p>Two ways to build demand. Either, or both.</p>
+      <dl>
+        <div>
+          <dt>Direct product relationships</dt>
+          <dd>
+            Relevant people trying your product, asking questions and sharing
+            feedback—with local onboarding and follow-up.
+          </dd>
+        </div>
+        <div>
+          <dt>Creator-led market demand</dt>
+          <dd>
+            Trusted voices explaining your project, answering audience
+            questions and giving people a reason to participate.
+          </dd>
+        </div>
+      </dl>
+    </div>
+  );
+}
+
 // A conceptual mechanism, not a measured funnel. Meaningful labels stay in
 // HTML so they remain readable independently of the decorative geometry.
 function HoloOrbit({
