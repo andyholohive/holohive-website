@@ -4,6 +4,7 @@ import { ScanSamplePreview } from '@/components/scan-sample-preview';
 
 import { useEffect, useRef, useState, type SyntheticEvent } from 'react';
 import Link from 'next/link';
+import Script from 'next/script';
 import {
   ArrowLeft,
   ArrowRight,
@@ -286,14 +287,18 @@ export function QualificationDialog({
   }
 
   function textField(
-    key: 'name' | 'email' | 'website',
+    key: 'name' | 'email' | 'website' | 'company' | 'telegram',
     label: string,
     type = 'text',
     autoComplete?: string,
+    optional = false,
   ) {
     return (
       <div className="hh-inquiry-field">
-        <label htmlFor={`inquiry-${key}`}>{label}</label>
+        <label htmlFor={`inquiry-${key}`}>
+          {label}
+          {optional && <span className="hh-optional"> (optional)</span>}
+        </label>
         <input
           id={`inquiry-${key}`}
           name={key}
@@ -301,9 +306,17 @@ export function QualificationDialog({
           autoComplete={autoComplete}
           value={answers[key]}
           onChange={(event) => update(key, event.target.value)}
-          required
-          maxLength={key === 'website' ? 500 : key === 'email' ? 254 : 120}
-          placeholder={key === 'website' ? 'yourproject.com' : undefined}
+          required={!optional}
+          maxLength={
+            key === 'website' ? 500 : key === 'email' ? 254 : key === 'telegram' ? 60 : 120
+          }
+          placeholder={
+            key === 'website'
+              ? 'yourproject.com'
+              : key === 'telegram'
+                ? '@username'
+                : undefined
+          }
           aria-invalid={!!errors[key]}
           aria-describedby={errors[key] ? `inquiry-${key}-error` : undefined}
         />
@@ -529,6 +542,13 @@ export function QualificationDialog({
                       </Link>
                     ) : null}
                   </div>
+                  {!booked && outcome.status === 'calendar_ready' && (
+                    <p className="hh-booking-fallback">
+                      No time that works? You don&rsquo;t need to do anything
+                      else. We have your details and will reach out{' '}
+                      {answers.telegram ? 'on Telegram' : 'by email'}.
+                    </p>
+                  )}
                 </div>
                 {calendarOpen &&
                   !bookingDismissed &&
@@ -593,10 +613,18 @@ export function QualificationDialog({
                     )}
                   </DialogDescription>
                   {step === 'fit' && (
-                    <p className="hh-fit-paid-copy">
-                      Ongoing engagements: <span>US$15K–$25K/month</span>,
-                      depending on scope. Usually starting with 90 days.
-                    </p>
+                    <>
+                      <p className="hh-fit-paid-copy">
+                        Ongoing engagements: <span>US$15K–$25K/month</span>,
+                        depending on scope. Usually starting with 90 days.
+                      </p>
+                      {/* Load Calendly's widget early so the calendar is ready
+                      on submit. The booking URL still comes only from the API. */}
+                      <Script
+                        src="https://assets.calendly.com/assets/external/widget.js"
+                        strategy="lazyOnload"
+                      />
+                    </>
                   )}
                 </div>
                 <form
@@ -641,10 +669,24 @@ export function QualificationDialog({
                         ) : (
                           textField('website', 'Project website', 'text', 'url')
                         )}
+                        {textField(
+                          'company',
+                          'Project name',
+                          'text',
+                          'organization',
+                          true,
+                        )}
                         {choice('goal', 'What would you most like to achieve?')}
                         <div className="hh-inquiry-contact hh-inquiry-grid">
                           {textField('name', 'Your name', 'text', 'name')}
                           {textField('email', 'Work email', 'email', 'email')}
+                          {textField(
+                            'telegram',
+                            'Telegram',
+                            'text',
+                            'off',
+                            true,
+                          )}
                         </div>
                         <details
                           className="hh-inquiry-context"

@@ -62,6 +62,7 @@ export type Inquiry = {
   company: string;
   website: string;
   role: string;
+  telegram: string;
   need: string;
 } & Record<QualificationChoice, string>;
 export type InquiryErrors = Partial<Record<keyof Inquiry, string>>;
@@ -72,6 +73,7 @@ export const emptyInquiry: Inquiry = {
   company: '',
   website: '',
   role: '',
+  telegram: '',
   authority: '',
   goal: '',
   need: '',
@@ -138,6 +140,15 @@ export function validateInquiry(value: unknown): {
   } catch {
     errors.website = 'Enter your project website, for example example.com.';
   }
+  // Optional. Accept @name, t.me/name or a full link; store as @name.
+  const handle = data.telegram
+    .replace(/^(https?:\/\/)?(www\.)?(t\.me|telegram\.me)\//i, '')
+    .replace(/^@/, '')
+    .replace(/\/+$/, '');
+  if (handle && !/^[A-Za-z0-9_]{4,32}$/.test(handle)) {
+    errors.telegram = 'Enter a Telegram username, for example @yourname.';
+  }
+  data.telegram = handle ? `@${handle}` : '';
   if (data.need.length > 1500 || (data.goal === 'written' && !data.need)) {
     errors.need = 'Briefly describe your goal (up to 1,500 characters).';
   }

@@ -1,17 +1,36 @@
 /* One spacing rhythm across the approved homepage compositions. */
-.hh-measurement-disclosure {
-  margin-top: 16px;
+.hh-footer-links {
+  align-items: center;
+}
+.hh-footer-social {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hh-footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
   color: var(--hh-muted);
-  font-size: 0.875rem;
-  line-height: 1.6;
-  max-width: 70ch;
+  transition:
+    color 0.15s,
+    background 0.15s;
 }
-.hh-measurement-disclosure summary {
-  cursor: pointer;
-  padding-block: 8px;
+.hh-footer-social a:hover {
+  color: var(--hh-ink, #17271e);
+  background: #17271e0d;
 }
-.hh-measurement-disclosure p {
-  margin-top: 8px;
+.hh-footer-social a:focus-visible {
+  outline: 2px solid #24583e;
+  outline-offset: 2px;
+}
+.hh-footer-social svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
 }
 .hh-site {
   --hh-section-space: clamp(56px, 6.5vw, 88px);
@@ -1158,4 +1177,31 @@
   .hh-folio-page .hh-scan-tabs [data-slot='tabs-trigger']:last-child {
     margin-inline-end: 32px;
   }
+}
+
+/* Footer icons: round 44px tap targets on touch layouts. */
+@media (max-width: 780px) {
+  .hh-footer-links .hh-footer-social a {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+  }
+  .hh-footer-links .hh-footer-social {
+    margin-inline-start: -13px;
+  }
+}
+
+/* Inquiry form: optional field marker and the no-time-works note. */
+.hh-inquiry-field label:has(.hh-optional) {
+  display: block;
+}
+.hh-inquiry-field .hh-optional {
+  color: var(--hh-muted);
+  font-weight: 400;
+}
+.hh-booking-fallback {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--hh-muted);
 }

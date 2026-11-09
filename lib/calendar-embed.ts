@@ -49,5 +49,7 @@ export function calendarEmbedOptions(calendarUrl: string) {
   ]) {
     url.searchParams.delete(key);
   }
+  // Calendly's own cookie banner otherwise covers half the inline calendar.
+  url.searchParams.set('hide_gdpr_banner', '1');
   return { url: url.toString(), prefill, utm };
 }

@@ -10,7 +10,10 @@ test('advanced embed receives saved identity and attribution separately from the
   const options = calendarEmbedOptions(
     'https://calendly.com/example/demo?name=Test+Founder&email=test%40example.com&utm_source=holohive&utm_medium=qualified_inquiry&utm_campaign=scan&utm_content=synthetic-id',
   );
-  assert.equal(options.url, 'https://calendly.com/example/demo');
+  assert.equal(
+    options.url,
+    'https://calendly.com/example/demo?hide_gdpr_banner=1',
+  );
   assert.deepEqual(options.prefill, {
     name: 'Test Founder',
     email: 'test@example.com',

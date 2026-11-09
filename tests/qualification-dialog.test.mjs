@@ -234,7 +234,7 @@ test('two short screens collect six required answers, then immediately show the 
   assert.equal(
     h.nodes().filter((n) => n.props?.name && n.props.name !== 'companyFax')
       .length,
-    5, // Four required project/contact answers, plus collapsed optional context.
+    7, // Four required answers, optional project name and Telegram, plus collapsed context.
   );
   h.fill();
   assert.equal(h.find('ScanSamplePreview'), undefined);
@@ -320,7 +320,7 @@ test('errors stay on their screen, in displayed order; optional context is not a
       .nodes()
       .filter((n) => n.props?.name && n.props.name !== 'companyFax')
       .map((n) => n.props.name),
-    ['website', 'goal', 'name', 'email', 'need'],
+    ['website', 'company', 'goal', 'name', 'email', 'telegram', 'need'],
   );
   await h.submit();
   assert.equal(h.focused.at(-1), 'inquiry-website');

@@ -167,6 +167,7 @@ export async function POST(request: Request) {
         name: data.name,
         email: data.email,
         company: data.company,
+        telegram: data.telegram || null,
         website: data.website,
         role: data.role,
         decision_role: choiceLabel('authority', data.authority),

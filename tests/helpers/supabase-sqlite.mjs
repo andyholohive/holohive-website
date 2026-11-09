@@ -23,7 +23,8 @@ CREATE TABLE site_inquiries (
   business_capacity TEXT,
   monthly_budget_readiness TEXT NOT NULL,
   qualification_status TEXT NOT NULL,
-  review_reasons TEXT NOT NULL
+  review_reasons TEXT NOT NULL,
+  telegram TEXT
 );
 CREATE INDEX site_inquiries_email_submitted_idx ON site_inquiries (email, submitted_at);
 CREATE TABLE site_funnel_counts (
