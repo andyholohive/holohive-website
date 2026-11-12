@@ -32,12 +32,12 @@ export function VeniceCompletion() {
       </div>
       <figcaption>
         <span className="hh-graphic-label">Feature-use activation</span>
-        <h4>Completed all five product tasks.</h4>
+        <h4>Submitted five screenshots.</h4>
         <p>
-          <strong>1,287</strong> verified participants
+          <strong>1,287</strong> entry records
         </p>
         <span className="hh-note">
-          Separate two-week feature-use activation.
+          Separate feature-use activation.
         </span>
       </figcaption>
     </figure>
@@ -59,9 +59,6 @@ export function FogoActivation() {
           <strong>Trading on Valiant</strong>
         </div>
       </div>
-      <p>
-        <strong>320</strong> verified wallets
-      </p>
     </figure>
   );
 }

@@ -101,10 +101,10 @@ export function CasePosters() {
           </div>
         </div>
         <div className="hh-poster-support hh-poster-demand hh-poster-secondary">
-          <strong>$1M+</strong>
+          <strong>$1M+ each</strong>
           <div>
-            <span>Korean creator allocation requests</span>
-            <small>Before the sale</small>
+            <span>Pre-sale allocation requests</span>
+            <small>Multiple people · Holo Hive founder-reported</small>
           </div>
         </div>
         <CaseFooter slug="umia" name="UMIA" />
@@ -185,10 +185,14 @@ export function CasePosters() {
             <strong className="hh-poster-number">$5.48M</strong>
             <span>
               Tracked trading volume{' '}
-              <span className="hh-result-time">in 2 weeks</span>
+              <span className="hh-result-time">
+                in the first 2 conversion weeks
+              </span>
             </span>
           </h3>
-          <p className="hh-poster-context">Valiant · Fogo ecosystem</p>
+          <p className="hh-poster-context">
+            Valiant · Fogo ecosystem · Holo Hive reporting
+          </p>
         </div>
         <CaseFooter slug="fogo" name="Fogo" />
       </article>

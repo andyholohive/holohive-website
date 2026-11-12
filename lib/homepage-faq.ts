@@ -41,16 +41,15 @@ export const homepageQuestions = [
   {
     question: 'How soon can the work go live?',
     answer:
-      'We target the first creator activity within seven days of the agreed kickoff.',
+      'We agree the first activities around your product readiness and milestones.',
     detail:
-      'Timing depends on access and approvals. Your agreement sets the delivery commitments.',
+      'Timing depends on scope, access and approvals. Kickoff, review points and engagement length are agreed in your proposal.',
   },
   {
-    question: 'Why a 90-day engagement?',
-    answer:
-      'Time to build presence, run campaigns and learn from the response.',
+    question: 'How much does an engagement cost?',
+    answer: 'Engagements start at US$15,000/month.',
     detail:
-      'At week six, we review progress against your starting point and refine the plan. Commitments and any remedies are defined in your agreement.',
+      'Scope, included costs, duration and review points are agreed in your proposal. The Korea scan and walkthrough are free for qualified teams.',
   },
   {
     question: 'What is included in the Korea scan?',

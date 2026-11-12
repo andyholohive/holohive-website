@@ -365,8 +365,9 @@ test('shorter FAQ retains decision-critical scope, timing and eligibility', () =
     .join(' ');
   assert.match(copy, /do not arrange or guarantee exchange listings/);
   assert.match(copy, /data your team shares/);
-  assert.match(copy, /within seven days of the agreed kickoff/);
-  assert.match(copy, /At week six/);
+  assert.match(copy, /Engagements start at US\$15,000\/month\./);
+  assert.match(copy, /engagement length are agreed in your proposal/);
+  assert.doesNotMatch(copy, /seven days|week six|90-day/i);
   assert.match(copy, /Free for qualified teams/);
   assert.match(copy, /without duplicating effort/);
   const home = read('app/home-content.tsx');
@@ -458,8 +459,7 @@ test('guide doorway links to two real buying questions with audited reading esti
   assert.match(html, /Before your first call\./);
   assert.match(html, /Korea field guide/);
   assert.equal((html.match(/class="hh-guide-link-title"/g) ?? []).length, 2);
-  assert.match(html, /~2 min/);
-  assert.match(html, /~3 min/);
+  assert.equal((html.match(/~2 min/g) ?? []).length, 2);
   for (const chapter of guideChapters) {
     const content = renderToStaticMarkup(
       React.createElement(GuideChapterContent, { id: chapter.id }),
@@ -604,11 +604,13 @@ test('case previews prioritize outcomes without dropping periods or geographic s
   const html = renderToStaticMarkup(React.createElement(CasePosters));
   assert.equal((html.match(/<article\b/g) ?? []).length, 3);
   assert.equal((html.match(/hh-poster-secondary/g) ?? []).length, 2);
-  assert.match(html, /Korean creator allocation requests/);
-  assert.match(html, /Before the sale/);
+  assert.match(html, /\$1M\+ each/);
+  assert.match(html, /Pre-sale allocation requests/);
+  assert.match(html, /Multiple people · Holo Hive founder-reported/);
   assert.match(html, /\$5\.48M/);
   assert.match(html, /Tracked trading volume/);
-  assert.match(html, /in 2 weeks/);
+  assert.match(html, /in the first 2 conversion weeks/);
+  assert.match(html, /Holo Hive reporting/);
   assert.match(html, /Valiant · Fogo ecosystem/);
   assert.match(html, /Client estimate · two weeks to July 23/);
   assert.match(html, /Summer 2026/);
@@ -656,10 +658,13 @@ test('Venice work feature uses the real artifact and distinguishes the feature-u
   assert.match(html, /Submit proof of use/);
   assert.match(html, /1,287/);
   assert.match(html, /5,134/);
+  assert.match(html, /Entry records/);
+  assert.match(html, /Entries with five screenshots/);
   assert.match(
     html,
-    /Separate from the 819 signups and the July active-user report/,
+    /not verified unique users or proof of five distinct features used/,
   );
+  assert.doesNotMatch(html, /Verified participants|Completed all five/);
   assert.doesNotMatch(html, /hh-campaign-action-summary|retention lift/);
 });
 

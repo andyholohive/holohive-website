@@ -47,7 +47,7 @@ export const guideReading: Record<
   'choosing-a-partner': {
     takeaway:
       'Creator access is one part of the job. A partner should also own the research, local explanation, coordination and reporting.',
-    minutes: 3,
+    minutes: 2,
     nextStep: 'Leave the first call with a clearer Korea decision.',
     nextStepDetail:
       'We’ll walk through your scan, discuss your goals and assess fit. If there is a fit, we’ll outline the next step.',

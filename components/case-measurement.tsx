@@ -13,9 +13,9 @@ const measures: Record<
     },
     {
       label: 'Pre-sale interest',
-      value: '$1M+',
+      value: '$1M+ each',
       scope:
-        'Allocation requests from Korean creators—not completed investment.',
+        'Multiple people requested allocations of $1M+ each before the sale, according to Holo Hive’s founder. Requests, not completed investment.',
     },
   ],
   venice: [
@@ -37,7 +37,7 @@ const measures: Record<
       label: 'Tracked trading volume',
       value: '$5.48M',
       scope:
-        'Company-reported Valiant activity · First two conversion weeks, after awareness-building. Not revenue or net capital inflow.',
+        'Holo Hive campaign reporting · Valiant activity in the first two conversion weeks, after awareness-building. Not revenue or net capital inflow.',
     },
   ],
 };

@@ -456,7 +456,7 @@ export default function Home() {
               {homepageQuestions.map(({ question, answer, detail }, i) => (
                 <AccordionItem key={question} value={String(i)}>
                   <AccordionTrigger>{question}</AccordionTrigger>
-                  <AccordionContent>
+                  <AccordionContent keepMounted>
                     <p className="hh-faq-answer">{answer}</p>
                     <p className="hh-faq-detail">{detail}</p>
                   </AccordionContent>

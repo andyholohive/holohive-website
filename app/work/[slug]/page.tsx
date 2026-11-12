@@ -21,7 +21,7 @@ export async function generateMetadata({
   if (!Object.hasOwn(cases, slug)) return {};
   const c = cases[slug as CaseKey];
   return {
-    title: `${c.name}: ${c.title} | Holo Hive`,
+    title: 'pageTitle' in c ? c.pageTitle : `${c.name}: ${c.title} | Holo Hive`,
     description: c.body,
     alternates: { canonical: `/work/${slug}` },
     openGraph: {
@@ -192,11 +192,6 @@ export default async function CasePage({
                   <span>{row.label}</span>
                   <strong>{row.value}</strong>
                 </div>
-                {slug === 'umia' && (
-                  <div className="bar-track">
-                    <span style={{ width: `${row.width}%` }} />
-                  </div>
-                )}
               </div>
             ))}
             <p>{c.chartNote}</p>

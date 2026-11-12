@@ -41,26 +41,26 @@ export function VeniceCampaignStory() {
       </div>
       <dl
         className="hh-campaign-outcomes"
-        aria-label="Separate two-week feature-use activation results"
+        aria-label="Separate feature-use activation records"
       >
         <div>
-          <dt>Verified participants</dt>
+          <dt>Entry records</dt>
           <dd>1,287</dd>
         </div>
         <div>
-          <dt>Proof screenshots submitted</dt>
+          <dt>Screenshots submitted</dt>
           <dd>5,134</dd>
         </div>
         <div>
-          <dt>Completed all five tasks</dt>
+          <dt>Entries with five screenshots</dt>
           <dd>
             73<span>%</span>
           </dd>
         </div>
       </dl>
       <p className="hh-campaign-cohort-note">
-        Two-week feature-use activation · Separate from the 819 signups and the
-        July active-user report.
+        Separate feature-use activation. Gross entry and screenshot counts; not
+        verified unique users or proof of five distinct features used.
       </p>
     </section>
   );

@@ -27,7 +27,7 @@ function Outcome({
   label: string;
   context: string;
   children: ReactNode;
-  href: string;
+  href?: string;
   linkLabel?: string;
 }) {
   return (
@@ -40,9 +40,11 @@ function Outcome({
       </div>
       <div className="hh-guide-outcome-meaning">
         {children}
-        <Link href={href}>
-          {linkLabel} <ArrowUpRight size={16} aria-hidden="true" />
-        </Link>
+        {href && (
+          <Link href={href}>
+            {linkLabel} <ArrowUpRight size={16} aria-hidden="true" />
+          </Link>
+        )}
       </div>
     </section>
   );
@@ -281,9 +283,10 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
             href="/work/umia"
           >
             <p>
-              <strong>Investor interest.</strong> Beyond wider coverage,
-              creators relayed <strong>$1M+ in allocation requests</strong>{' '}
-              before the sale. These were requests, not completed investments.
+              <strong>Investor interest.</strong> Multiple people requested
+              allocations of <strong>$1M+ each</strong> before the sale,
+              according to Holo Hive’s founder. These were requests, not
+              completed investments.
             </p>
           </Outcome>
           <Outcome
@@ -310,7 +313,7 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
             <p>
               <strong>Ecosystem participation.</strong> Work around Fogo
               extended to use of a trading product in its ecosystem. The volume
-              was company-reported; it is not project revenue.
+              is from Holo Hive campaign reporting; it is not project revenue.
             </p>
           </Outcome>
           <Outcome
@@ -318,8 +321,6 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
             metric="~$10M"
             label="From Korea in the public round"
             context="15% of the $67M public round; approximately $10.05M."
-            href="/#flying-tulip"
-            linkLabel="View the result"
           >
             <p>
               <strong>Sale participation.</strong> Korea accounted for a
@@ -425,27 +426,17 @@ export function GuideChapterContent({ id }: { id: GuideId }) {
         Targets for market response are different from commitments to deliver
         specific work.
       </p>
-      <div className="hh-guide-milestones">
-        <div>
-          <strong>7 days</strong>
-          <span>First Korean creators live</span>
-        </div>
-        <div>
-          <strong>Week 6</strong>
-          <span>Progress review against the baseline</span>
-        </div>
-      </div>
-      <p className="hh-guide-conditions">
-        Seven days from agreed kickoff, after access and approvals are settled.
-        Initial plans usually run 90 days; the tailored agreement defines scope,
-        commitments and dependencies.
+      <p>
+        Kickoff, review points and engagement length are agreed in your
+        proposal.
       </p>
       <Note title="The first call is about your situation.">
         <p>
-          We review your scan, your goal and whether Korea deserves more
-          attention. If there is a fit, we discuss what a plan would need to
-          cover. The exact roster, budget allocation and measurement setup
-          belong in the tailored proposal.
+          If you request a scan and qualify, we prepare it before your first
+          call and walk you through the findings. You can also{' '}
+          <Link href="/#contact">book a call</Link> to discuss your goals
+          without requesting a scan. Both routes include a few questions to
+          check fit before booking.
         </p>
       </Note>
       <p>

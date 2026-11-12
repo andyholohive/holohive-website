@@ -1,9 +1,9 @@
 import { ArrowRight } from 'lucide-react';
 
 const coverage = [
-  { name: 'Placed mentions', value: 62 },
-  { name: 'Reposts', value: 65 },
-  { name: 'Independent pieces / shares', value: 54 },
+  { name: 'Recorded mentions, including reposts', value: 181 },
+  { name: 'Channels carrying coverage', value: 45 },
+  { name: 'Distinct write-ups', value: 72 },
 ];
 
 export function GuideVisual({
@@ -95,17 +95,7 @@ export function GuideVisual({
       {id === 'measurement' && (
         <div className="hh-guide-coverage">
           <div className="hh-guide-coverage-total">
-            <strong>181</strong>
-            <span>UMIA mentions</span>
-          </div>
-          <div className="hh-guide-coverage-bar" aria-hidden="true">
-            {coverage.map((item, i) => (
-              <span
-                key={item.name}
-                className={`tone-${i}`}
-                style={{ flex: item.value }}
-              />
-            ))}
+            <span>UMIA · Coverage at the final checkpoint</span>
           </div>
           <dl>
             {coverage.map((item) => (
@@ -145,7 +135,7 @@ const visualNotes: Record<string, string> = {
     'An illustrative message sequence. Each piece adds context.',
   participation: 'Choose a goal before choosing the campaign.',
   measurement:
-    'UMIA report · July 20–August 31, 2026. Reposts and independent pieces / shares are separate categories.',
+    'July 20–August 31, 2026 · Holo Hive reporting. Mentions include reposts; distinct write-ups are not necessarily unpaid or independent.',
   'choosing-a-partner':
     'Different models solve different gaps. None removes the need for client decisions.',
 };
