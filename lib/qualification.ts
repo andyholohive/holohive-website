@@ -114,7 +114,8 @@ export function validateInquiry(value: unknown): {
   if (!data.goal && data.need) data.goal = 'written';
   const errors: InquiryErrors = {};
   for (const key of ['name', 'company', 'role'] as const) {
-    if ((key === 'name' && !data[key]) || data[key].length > 120)
+    if (key === 'name' && !data[key]) errors[key] = 'Enter your name.';
+    else if (data[key].length > 120)
       errors[key] = 'Enter up to 120 characters.';
   }
   if (

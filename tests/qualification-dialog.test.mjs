@@ -456,3 +456,13 @@ test('pre-call guide and confirmation appear only after the embed reports a book
   );
   assert.ok(h.nodes().find((n) => n.props?.href === '/korea-guide'));
 });
+
+test('an invalid optional Telegram handle is caught on the first screen', async () => {
+  const h = harness({ error: 'unused' });
+  const { capacity, budget, ...project } = answers;
+  h.fill({ ...project, telegram: 'bad handle!' });
+  await h.submit();
+  assert.equal(h.submitted, undefined);
+  assert.equal(h.focused.at(-1), 'inquiry-telegram');
+  assert.ok(h.nodes().some((n) => n.props?.name === 'telegram'));
+});

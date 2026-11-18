@@ -198,9 +198,11 @@ export function QualificationDialog({
     if (!answers.goal) validation.errors.goal = 'Choose an answer.';
     const projectKeys: (keyof Inquiry)[] = [
       'website',
+      'company',
       'goal',
       'name',
       'email',
+      'telegram',
       'need',
     ];
     const projectErrors = Object.fromEntries(
